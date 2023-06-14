@@ -12,14 +12,15 @@ import math
 
 if __name__ == '__main__':
 
-    #open file and read data
+    # open file and read data
     with open("CovidDeathCounts.csv") as infile:
         data = list(csv.reader(infile))
-    #examine header fow to find column of interest
+        
+    # examine header row to find column of interest
     ageIndex = data[0].index("Age")
     covidDeathsIndex = data[0].index("COVID-19 Deaths")
     
-    #access field of interest in records and calculate/display stats
+    # access field of interest in records and calculate/display stats
     ages = [int(row[ageIndex]) for row in data[1:] if row[ageIndex] != '']
     c_deaths = [int(row[covidDeathsIndex]) for row in data[1:] if row[covidDeathsIndex] != '']
 
@@ -34,6 +35,7 @@ if __name__ == '__main__':
         std += (ages[i]-mean)**2
     std = math.sqrt(std/(N-1))
     
+    # write results to outfile
     with open('outfile.txt','w') as of:
         of.write("The average age of someone dying from COVID-19 is: {}.\n".format(mean))
         of.write("The standard deviation of the mean is: {}.".format(std))
