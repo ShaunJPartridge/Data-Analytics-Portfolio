@@ -1,5 +1,5 @@
 # R Projects
-This folder consists of all the projects I've done in R.
+This folder consists of all of the projects I've done in R so far.
 
 | Project | Description |
 |------------ | ------------|
