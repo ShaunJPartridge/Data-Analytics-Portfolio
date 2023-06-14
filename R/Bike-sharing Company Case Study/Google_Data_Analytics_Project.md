@@ -215,7 +215,7 @@ Plot to display the count of each rider group for each day of the week
 
 Plot to display the count of each rider group for every month
 
-![](Google_Data_Analytics_Project_files/figure-gfm/Plot%20of%20count%20of%20riders%20each%20month%20of%20the%20year-1.png)<!-- -->
+![](https://github.com/ShaunJPartridge/Data-Analytics-Portfolio/blob/main/R/Bike-sharing%20Company%20Case%20Study/Images/2023-06-14%20(2).png)<!-- -->
 
 # Act
 
