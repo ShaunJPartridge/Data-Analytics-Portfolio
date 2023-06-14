@@ -1,7 +1,10 @@
-Google Data Analytics Capstone Project
+Case Study - Member vs Casual Riders
 ================
-Shaun Partridge
-2023-06-14
+This document is a case study that I completed for the capstone project of the Google Data Analytics Professional Certificate Specialization. The case study involved gathering, cleaning, and manipulating a bike-sharing company's data to provide insights on biking patterns between casual and member bike riders and a course of action to help secure the company's future growth. Each subtitle below represents a phase of the data analysis process.
+
+
+
+
 
 # Ask
 
@@ -27,41 +30,9 @@ analysis, in addition to reading in each .csv file into a data frame.
 
 ``` r
 install.packages("tidyverse", repos = "http://cran.us.r-project.org")
-```
-
-    ## package 'tidyverse' successfully unpacked and MD5 sums checked
-    ## 
-    ## The downloaded binary packages are in
-    ##  C:\Users\spart\AppData\Local\Temp\RtmpM1fN1l\downloaded_packages
-
-``` r
 install.packages("janitor", repos = "http://cran.us.r-project.org")
-```
-
-    ## package 'janitor' successfully unpacked and MD5 sums checked
-    ## 
-    ## The downloaded binary packages are in
-    ##  C:\Users\spart\AppData\Local\Temp\RtmpM1fN1l\downloaded_packages
-
-``` r
 install.packages("lubridate", repos = "http://cran.us.r-project.org")
 ```
-
-    ## package 'lubridate' successfully unpacked and MD5 sums checked
-
-    ## Warning: cannot remove prior installation of package 'lubridate'
-
-    ## Warning in file.copy(savedcopy, lib, recursive = TRUE): problem copying
-    ## C:\Users\spart\AppData\Local\R\win-library\4.3\00LOCK\lubridate\libs\x64\lubridate.dll
-    ## to
-    ## C:\Users\spart\AppData\Local\R\win-library\4.3\lubridate\libs\x64\lubridate.dll:
-    ## Permission denied
-
-    ## Warning: restored 'lubridate'
-
-    ## 
-    ## The downloaded binary packages are in
-    ##  C:\Users\spart\AppData\Local\Temp\RtmpM1fN1l\downloaded_packages
 
 ``` r
 library(tidyverse)
