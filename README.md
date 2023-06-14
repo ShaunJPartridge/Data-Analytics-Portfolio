@@ -8,4 +8,4 @@ This repo consists of my projects done with the following technologies: SQL, Goo
 
 
 # [R](https://github.com/ShaunJPartridge/Data-Analytics-Portfolio/tree/main/R)
-[Google Data Analytics - Capstone Project]([https://github.com/ShaunJPartridge/Data-Analytics-Portfolio/tree/main/R](https://github.com/ShaunJPartridge/Data-Analytics-Portfolio/blob/main/R/Google%20Data%20Analytics%20-%20Capstone%20Project)) 
+[Google Data Analytics - Capstone Project](https://github.com/ShaunJPartridge/Data-Analytics-Portfolio/tree/main/R/Google%20Data%20Analytics%20-%20Capstone%20Project)
