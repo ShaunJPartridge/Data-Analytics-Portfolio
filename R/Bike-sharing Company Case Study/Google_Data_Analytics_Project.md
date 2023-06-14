@@ -207,7 +207,7 @@ a data visualization library, and create a plot for each one.
 Plot to display the average ride duration per rider group for each day
 of the week
 
-![](Google_Data_Analytics_Project_files/figure-gfm/Plotting%20the%20average%20ride%20time%20per%20group%20for%20each%20day%20of%20the%20week-1.png)<!-- -->
+![](https://github.com/ShaunJPartridge/Data-Analytics-Portfolio/blob/main/R/Bike-sharing%20Company%20Case%20Study/Images/2023-06-14.png)<!-- -->
 
 Plot to display the count of each rider group for each day of the week
 
