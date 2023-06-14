@@ -1,16 +1,16 @@
 # Data-Analytics-Portfolio
 This repo consists of my projects done with the following technologies: SQL, Google Sheets, R, Tableau, and Power BI.
 
-# SQL Project
+## SQL Project
 
 
-# Google Sheets
+## Google Sheets
 
 
-# R
+## R
 [Bike-sharing Company Case Study](https://github.com/ShaunJPartridge/Data-Analytics-Portfolio/tree/main/R/Bike-sharing%20Company%20Case%20Study)
 
-# Tableau
+## Tableau
 
 
-# Power BI
+## Power BI
