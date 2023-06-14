@@ -8,7 +8,7 @@ This repo consists of my projects done with the following technologies: SQL, Goo
 
 
 # R
-[Google Data Analytics - Capstone Project]
+[Bike-sharing Company Case Study](https://github.com/ShaunJPartridge/Data-Analytics-Portfolio/tree/main/R/Bike-sharing%20Company%20Case%20Study)
 
 # Tableau
 
