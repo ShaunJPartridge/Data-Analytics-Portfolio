@@ -1,6 +1,6 @@
 Case Study - Member vs Casual Riders
 ================
-This document is a case study that I completed for the capstone project of the Google Data Analytics Professional Certificate Specialization. The case study involved gathering, cleaning, and manipulating a bike-sharing company's data to provide insights on biking patterns between casual and member bike riders and a course of action to help secure the company's future growth. Each subtitle below represents a phase of the data analysis process.
+This document is a case study that I completed for the capstone project of the Google Data Analytics Professional Certificate Specialization. The case study involved gathering, cleaning, and manipulating a bike-sharing company's data to get insights on biking patterns between casual and member bike riders and then providing a course of action that will help secure the company's future growth. Each subtitle below represents a phase of the data analysis process.
 
 
 
