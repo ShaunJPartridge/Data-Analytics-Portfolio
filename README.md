@@ -7,5 +7,10 @@ This repo consists of my projects done with the following technologies: SQL, Goo
 # Google Sheets
 
 
-# [R](https://github.com/ShaunJPartridge/Data-Analytics-Portfolio/tree/main/R)
-[Google Data Analytics - Capstone Project](https://github.com/ShaunJPartridge/Data-Analytics-Portfolio/tree/main/R/Google%20Data%20Analytics%20-%20Capstone%20Project)
+# R
+[Google Data Analytics - Capstone Project]
+
+# Tableau
+
+
+# Power BI
