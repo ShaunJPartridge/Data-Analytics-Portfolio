@@ -35,8 +35,8 @@ if __name__ == '__main__':
     std = math.sqrt(std/(N-1))
     
     with open('outfile.txt','w') as of:
-        of.write("The average chance of someone dying from COVID-19 is: {}.\n".format(mean))
+        of.write("The average age of someone dying from COVID-19 is: {}.\n".format(mean))
         of.write("The standard deviation of the mean is: {}.".format(std))
 
-    print("The average chance of someone dying from COVID-19 is: {}.".format(mean))
+    print("The average age of someone dying from COVID-19 is: {}.".format(mean))
     print("The standard deviation of the mean is: {}.".format(std))
