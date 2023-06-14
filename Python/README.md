@@ -1,5 +1,5 @@
 # Python Projects
-This folder consists of all the projects I've done in Python.
+This folder consists of all of the projects I've done in Python so far.
 
 | Project | Description |
 |------------ | ------------|
