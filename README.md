@@ -13,7 +13,7 @@ TBD
 [Bike-sharing Company Case Study](https://github.com/ShaunJPartridge/Data-Analytics-Portfolio/tree/main/R/Bike-sharing%20Company%20Case%20Study)
 
 ## Python
-[Average Age of COVID-19 Deaths]()
+[Average Age of COVID-19 Deaths](https://github.com/ShaunJPartridge/Data-Analytics-Portfolio/tree/main/Python/Avg-Covid-Death-Project)
 
 ## Tableau
 Loading...
