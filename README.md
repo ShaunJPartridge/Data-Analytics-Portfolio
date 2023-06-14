@@ -16,7 +16,7 @@ TBD
 [Average Age of COVID-19 Deaths]()
 
 ## Tableau
-TBD
+Loading...
 
 
 ## Power BI
