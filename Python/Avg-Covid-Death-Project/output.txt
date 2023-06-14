@@ -1,2 +1,2 @@
-The average chance of someone dying from COVID-19 is: 73.49640966573838.
+The average age of someone dying from COVID-19 is: 73.49640966573838.
 The standard deviation of the mean is: 0.6542040208873048.
