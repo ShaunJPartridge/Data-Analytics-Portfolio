@@ -13,7 +13,7 @@ The first step was identifying the problem or question that needed to be answere
   - What stats are common among the most winningest teams?
 
 # Step 2.
-The second step involved knowing and gathering the stats needed for thia analysis. The stats gathered are the following:
+The second step involved knowing and gathering the stats needed for this analysis. The stats gathered are the following:
   - away & home
   - score_away & score_home
   - third_downs_converted_away & third_downs_attempted_away
@@ -30,4 +30,6 @@ The second step involved knowing and gathering the stats needed for thia analysi
   - penalty_yards_home & penalties_home
   - def_st_td_away & turnovers_away
   - def_st_td_home & turnovers_home
-
+  - 
+# Step 3.
+The third step involved cleaning and manipulating the data.
