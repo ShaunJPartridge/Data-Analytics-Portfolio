@@ -10,10 +10,17 @@ For this project I wanted to analyze all 32 NFL teams' stats from the 2018 seaso
 
 # Step 1.
 The first step was identifying the problem or question that needed to be answered with this analysis. The question was:
-  - What stats are common among the most winningest teams?
+  - What stats are common among the most winningest teams in the NFL?
 
 # Step 2.
-The second step involved knowing and gathering the stats needed for this analysis. The stats gathered are the following:
+The second step involved figuring out what data was needed for this analysis. So, I did some research and found the [NFL Team Stats 2002 - Feb. 2023 (ESPN)](https://www.kaggle.com/datasets/cviaxmiwnptr/nfl-team-stats-20022019-espn) dataset on Kaggle. The data was then cleaned and stored as .csv and imported into Google Cloud BiqQuery for further analysis. 
+
+# Step 3.
+The third step involved cleaning and manipulating the data to get the needed stats for analysis. I started this step by importing the data into Google Sheets and analyzing what columns
+needed to be manipulated to perform ca.
+
+This is the result of the data cleaning process
+The stats used from the dataset are the following:
   - away & home
   - score_away & score_home
   - third_downs_converted_away & third_downs_attempted_away
@@ -30,6 +37,7 @@ The second step involved knowing and gathering the stats needed for this analysi
   - penalty_yards_home & penalties_home
   - def_st_td_away & turnovers_away
   - def_st_td_home & turnovers_home
-  - 
-# Step 3.
-The third step involved cleaning and manipulating the data.
+The data gathered from Kaggle was then cleaned and stored as .csv and imported into Google Cloud BiqQuery for further analysis.
+    
+
+
