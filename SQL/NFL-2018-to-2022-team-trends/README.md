@@ -51,9 +51,9 @@ The following were the rest of the stats needed for this analysis:
   - def_st_td_home & turnovers_home
 
 
-The cleaned data was then stored as .csv file and imported into Google Cloud BiqQuery for further analysis.
-
 # Step 4.
-    
+Now that the data is cleaned, we are going to import the .csv file into Google Cloud BigQuery and use SQL to perform calculations and generate a new spreadsheet
+containing the following computed stats:
+  - 1.
 
 
