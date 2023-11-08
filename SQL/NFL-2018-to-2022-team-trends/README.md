@@ -1,5 +1,5 @@
 # NFL team stat trends 2018 to 2022
-For this project I wanted to analyze all 32 NFL teams' stats from the 2018 season to the 2022 season to see if there were any common trends amongst teams that have double digit wins compared to teams with single digit wins. The data used for this analysis came from Kaggle's [NFL Team Stats 2002 - Feb. 2023 (ESPN)](https://www.kaggle.com/datasets/cviaxmiwnptr/nfl-team-stats-20022019-espn) dataset. I chose to only use the 
+For this project I wanted to analyze all 32 NFL teams' stats from the 2018 season to the 2022 season to see if there were any common trends or stats amongst teams with winning and losing records. The data used for this analysis came from Kaggle's [NFL Team Stats 2002 - Feb. 2023 (ESPN)](https://www.kaggle.com/datasets/cviaxmiwnptr/nfl-team-stats-20022019-espn) dataset. I chose to only use the 
 2018-2019 to 2022-2023 seasons because there were a few games missing from earlier seasons and the data sample size was sufficient enough for this analysis.
 
 # Technologies Used
@@ -9,8 +9,9 @@ For this project I wanted to analyze all 32 NFL teams' stats from the 2018 seaso
 
 
 # Step 1.
-The first step was identifying the problem or question that needed to be answered with this analysis. The question was:
-  - What stats are common among the most winningest teams in the NFL?
+The first step was identifying the problem or question that needed to be answered with this analysis. The questions were:
+  - What stats are common among the most winningest and losing teams in the NFL?
+  - What divisions are the aforementioned teams in? 
 
 # Step 2.
 The second step was figuring out what data was needed for this analysis, as I wanted to gather quantitative team data so that the stats aren't biased based off of star players on teams. So, I did some research and found the [NFL Team Stats 2002 - Feb. 2023 (ESPN)](https://www.kaggle.com/datasets/cviaxmiwnptr/nfl-team-stats-20022019-espn) dataset on Kaggle.  The data was then cleaned in Google Sheets, stored as .csv file and then imported into Google Cloud BiqQuery for further analysis. 
