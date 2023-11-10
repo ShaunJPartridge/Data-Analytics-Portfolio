@@ -10,7 +10,7 @@ For this project I wanted to analyze all 32 NFL teams' stats from the 2018 seaso
 
 # Step 1.
 The first step was identifying the problem or question that needed to be answered with this analysis. The questions were:
-  - What stats are common among the most winningest and losing teams in the NFL?
+  - Who are the most winningest and losing teams in the NFL?
   - What divisions are the aforementioned teams in? 
 
 # Step 2.
