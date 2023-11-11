@@ -41,7 +41,7 @@ Clean data:
 ![cleaned-stats-creenshot](https://github.com/ShaunJPartridge/Data-Analytics-Portfolio/assets/47838616/0799ae65-8b5a-4439-a109-ac77eb309a8b)
 
 
-The following were the rest of the stats needed for this analysis:
+The following were the rest of the stats used for this analysis:
   - away & home
   - score_away & score_home
   - passing_yards_away
@@ -54,7 +54,16 @@ The following were the rest of the stats needed for this analysis:
 
 # Step 4.
 Now that the data is cleaned, we are going to import the .csv file into Google Cloud BigQuery and use SQL to perform calculations and generate a new spreadsheet
-containing the following computed stats:
-  - 1.
-
+containing the following computed stats for each regular season:
+  - team
+  - yr_record
+  - yr_3rd_down%
+  - yr_4th_down%
+  - yr_ypc (yards per catch)
+  - yr_ypr (yard per rush)
+  - yr_rz% (red zone percentage)
+  - yr_ypp (yards per penalty)
+  - yr_dst_points (defense/special teams points)
+  - yr_turnovers 
+The view the final SQL script in Google Cloud BigQuery, click [here](https://console.cloud.google.com/bigquery?sq=129548345512:86c4bff89dd0408da67dd4211b61c7d3).
 
