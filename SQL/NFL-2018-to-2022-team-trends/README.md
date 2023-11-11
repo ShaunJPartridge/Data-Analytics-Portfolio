@@ -66,9 +66,17 @@ containing the following computed stats for each regular season:
   - yr_dst_points (defense/special teams points)
   - yr_turnovers
 
-A CTE and aggregation functions we're used to gather the stats above. The CTE, getSums, involved combining a home and away table by UNIONing the stats that we're generated in step three, for each team when they were the away and home team, and then using the SUM function to accumulate each stat for each team. The CTE is grouped by team and ordered by date. The date column is selected so that the stats can be quered by the date next. Below is the CTE.
-![ss1 here](https://console.cloud.google.com/bigquery?sq=129548345512:86c4bff89dd0408da67dd4211b61c7d3)
-![ss2 here](https://console.cloud.google.com/bigquery?sq=129548345512:86c4bff89dd0408da67dd4211b61c7d3)
+A CTE and aggregation functions we're used to gather the stats above. The CTE, getSums, involved combining a home and away table by UNIONing the stats that we're generated in step three, for each team when they were the away and home team, and then using the SUM function to accumulate each stat for each team. The CTE is grouped by team and ordered by date. The date column is selected so that the stats can be quered by the date in the next query. Below is the CTE.
+
+![getSums-SS1](https://github.com/ShaunJPartridge/Data-Analytics-Portfolio/assets/47838616/1b7d4281-524d-49c9-a602-dc4cff93676b)
+![getSums-SS2](https://github.com/ShaunJPartridge/Data-Analytics-Portfolio/assets/47838616/7b4d786c-e056-43f3-96e8-73c9a7fd5a31)
+
+The next and final query was used to get teams' name, along with their record and stats for each season from 2018 to 2022. The seasons were gathered by JOINing 5 tables, each representing a regular season, on the name column. Each stat returned respresents the average for that particular stat in every season. Each season 
+is seperated by using the date column in the WHERE clause. The final table is ordered by teams' total wins and ties over the last 5 seasons in descending order. The query can be referenced below.
+
+
+
+
 
 
 To view the complete SQL script in Google Cloud BigQuery, click [here](https://console.cloud.google.com/bigquery?sq=129548345512:86c4bff89dd0408da67dd4211b61c7d3).
