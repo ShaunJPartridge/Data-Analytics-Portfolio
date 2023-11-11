@@ -64,6 +64,12 @@ containing the following computed stats for each regular season:
   - yr_rz% (red zone percentage)
   - yr_ypp (yards per penalty)
   - yr_dst_points (defense/special teams points)
-  - yr_turnovers 
-The view the final SQL script in Google Cloud BigQuery, click [here](https://console.cloud.google.com/bigquery?sq=129548345512:86c4bff89dd0408da67dd4211b61c7d3).
+  - yr_turnovers
+
+A CTE and aggregation functions we're used to gather the stats above. The CTE, getSums, involved combining a home and away table by UNIONing the stats that we're generated in step three, for each team when they were the away and home team, and then using the SUM function to accumulate each stat for each team. The CTE is grouped by team and ordered by date. The date column is selected so that the stats can be quered by the date next. Below is the CTE.
+![ss1 here](https://console.cloud.google.com/bigquery?sq=129548345512:86c4bff89dd0408da67dd4211b61c7d3)
+![ss2 here](https://console.cloud.google.com/bigquery?sq=129548345512:86c4bff89dd0408da67dd4211b61c7d3)
+
+
+To view the complete SQL script in Google Cloud BigQuery, click [here](https://console.cloud.google.com/bigquery?sq=129548345512:86c4bff89dd0408da67dd4211b61c7d3).
 
