@@ -54,7 +54,7 @@ The following were the rest of the stats used for this analysis:
 
 # Step 4.
 Now that the data is cleaned, we are going to import the .csv file into Google Cloud BigQuery and use SQL to perform calculations and generate a new spreadsheet
-containing the following computed stats for each regular season:
+containing the following computed stats for each season:
   - team
   - yr_record
   - yr_3rd_down%
