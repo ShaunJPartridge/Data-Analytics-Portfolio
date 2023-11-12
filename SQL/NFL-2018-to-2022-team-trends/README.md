@@ -71,8 +71,8 @@ A CTE and aggregation functions we're used to gather the stats above. The CTE, g
 ![getSums-SS1](https://github.com/ShaunJPartridge/Data-Analytics-Portfolio/assets/47838616/1b7d4281-524d-49c9-a602-dc4cff93676b)
 ![getSums-SS2](https://github.com/ShaunJPartridge/Data-Analytics-Portfolio/assets/47838616/7b4d786c-e056-43f3-96e8-73c9a7fd5a31)
 
-The next and final query was used to get teams' name, along with their record and stats for each season from 2018 to 2022. The seasons were gathered by JOINing 5 tables, each representing a regular season, on the name column. Each stat returned respresents the average for that particular stat in every season. Each season 
-is seperated by using the date column in the WHERE clause. The final table is ordered by teams' total wins and ties over the last 5 seasons in descending order. The query can be referenced below.
+The next and final query was used to get teams' name, along with their record and stats for each season from 2018 to 2022. The seasons were gathered by JOINing 5 tables, each representing a season, on the name column. Each stat returned respresents the average for that particular stat in every season. Each season 
+is collected by using the date column in the WHERE clause of each subquery. The final table is ordered by teams' total wins and ties over the last 5 seasons in descending order. The query can be referenced below.
 
 
 
