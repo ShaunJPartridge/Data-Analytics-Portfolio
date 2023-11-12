@@ -72,7 +72,12 @@ A CTE and aggregation functions we're used to gather the stats above. The CTE, g
 ![getSums-SS2](https://github.com/ShaunJPartridge/Data-Analytics-Portfolio/assets/47838616/7b4d786c-e056-43f3-96e8-73c9a7fd5a31)
 
 The next and final query was used to get teams' name, along with their record and stats for each season from 2018 to 2022. The seasons were gathered by JOINing 5 tables, each representing a season, on the name column. Each stat returned respresents the average for that particular stat in every season. Each season 
-is collected by using the date column in the WHERE clause of each subquery. The final table is ordered by teams' total wins and ties over the last 5 seasons in descending order. The query can be referenced below.
+is collected by using the date column in the WHERE clause of each subquery. The final table is ordered by teams' total wins over the last 5 seasons in descending order. The query can be referenced below.
+
+![final-query-1-ss](https://github.com/ShaunJPartridge/Data-Analytics-Portfolio/assets/47838616/190a8255-5024-4ed9-9bdc-2f34805c037f)
+![final-query-2-ss](https://github.com/ShaunJPartridge/Data-Analytics-Portfolio/assets/47838616/0c0e62e7-7465-4d65-bc99-21dfcdd6d4ea)
+![final-query-3-ss](https://github.com/ShaunJPartridge/Data-Analytics-Portfolio/assets/47838616/a7d93b3b-2a35-479e-91ee-d60d94718d0c)
+![final-query-ss-4](https://github.com/ShaunJPartridge/Data-Analytics-Portfolio/assets/47838616/d715aa94-031d-424e-a2bf-d6a981d8b60c)
 
 
 
@@ -80,4 +85,7 @@ is collected by using the date column in the WHERE clause of each subquery. The 
 
 
 To view the complete SQL script in Google Cloud BigQuery, click [here](https://console.cloud.google.com/bigquery?sq=129548345512:86c4bff89dd0408da67dd4211b61c7d3).
+
+# Step 5.
+The results from the query above will now be exported to Google Sheets so that they can be shared in a more concise manner.
 
