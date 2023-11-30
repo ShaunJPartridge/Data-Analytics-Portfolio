@@ -2,11 +2,11 @@
 This repo consists of my projects done with the following technologies: SQL, Google Sheets, R, Python, Tableau, and Power BI.
 
 ## SQL
-Loading...
+[2018 to 2022 NFL Team Trends](https://github.com/ShaunJPartridge/Data-Analytics-Portfolio/tree/main/SQL/NFL-2018-to-2022-team-trends)
 
 
 ## Google Sheets
-TBD
+[2018 to 2022 NFL Team Trends](https://github.com/ShaunJPartridge/Data-Analytics-Portfolio/tree/main/SQL/NFL-2018-to-2022-team-trends)
 
 
 ## R
