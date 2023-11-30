@@ -106,5 +106,5 @@ Next, a 9x3 table with conditional formatting was created to compare the top 13 
 From the table above, the few stats that have a significant difference are 3rd and 4th down conversion percentage, redzone conversion percentage, and defense/special teams points. It's clear that the top 13 teams convert on more crucial downs to extend drives, as well as turn their drives into points near the goal line and score with their defense and special teams.
 
 # Step 6
-The ideal stakeholders for this analysis would be team owners, GMs, scouts, and coaches. They could use this analysis to evaluate their own teams and decide what side(s) of the ball need improvement. Improvement can be accomplished by drafting players in key positions, trading for a player or players during the season, or signing free agents who could help their team.
+The ideal stakeholders for this analysis would be team owners, GMs, scouts, and coaches. They could use this analysis to evaluate their own teams and decide what side(s) of the ball need improvement. Improvement can be accomplished by drafting players in key positions, trading for a player or players during the season, or signing free agents who could also help their team.
 
