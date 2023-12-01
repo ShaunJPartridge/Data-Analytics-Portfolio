@@ -108,5 +108,6 @@ From the table above, the few stats that have a significant difference are 3rd a
 To view the complete Google Sheet, click [here](https://docs.google.com/spreadsheets/d/1_EnJwNf1L5uvE38vvAfg1oJl_iUcfAlO9dWKNdUHeq0/edit?usp=sharing)
 
 # Step 6
-The ideal stakeholders for this analysis would be team owners, GMs, scouts, and coaches. They could use this analysis to evaluate their own teams and decide what side(s) of the ball need improvement. Improvement can be accomplished by drafting players in key positions, trading for a player or players during the season, or signing free agents who could also help their team.
+The ideal stakeholders for this analysis would be team owners, GMs, scouts, and coaches. They could use this analysis to evaluate their own teams and decide what side(s) of the ball need improvement. Improvement can be accomplished by drafting players in key positions, trading for a player or players during the season, or signing free agents who could also help their team. However, the players are not
+the only factor in a team's success, as coaches and GM's should also be considered when rebuilding for success.
 
