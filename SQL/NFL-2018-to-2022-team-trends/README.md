@@ -84,7 +84,6 @@ is collected by using the date column in the WHERE clause of each subquery. The 
 
 
 
-To view the complete SQL script in Google Cloud BigQuery, click [here](https://console.cloud.google.com/bigquery?sq=129548345512:86c4bff89dd0408da67dd4211b61c7d3).
 
 # Step 5.
 The results from the query above will now be exported to Google Sheets so that they can be shared in a more concise manner. A new tab was created in the spreadsheet to show the most winningest teams', highlighted in bright blue, and the rest of the leagues' (ROL) stat averages over the past five seasons. Conditional formatting was used to visualize the averages for each team, as well as compare the averages of the most winningest teams to the ROL. The AVERAGE function was used in the new tab to get the averages of each stat for each team using data from the imported spreadsheet, NFL_TEAM_STATS_2018_TO_2022, from Google BigQuery. The parameters passed in the function are the following:
@@ -105,7 +104,6 @@ Next, a 9x3 table with conditional formatting was created to compare the top 13 
 
 From the table above, the few stats that have a significant difference are 3rd and 4th down conversion percentage, redzone conversion percentage, and defense/special teams points. It's clear that the top 13 teams convert on more crucial downs to extend drives, as well as turn their drives into points near the goal line and score with their defense and special teams.
 
-To view the complete Google Sheet, click [here](https://docs.google.com/spreadsheets/d/1_EnJwNf1L5uvE38vvAfg1oJl_iUcfAlO9dWKNdUHeq0/edit?usp=sharing)
 
 # Step 6
 The ideal stakeholders for this analysis would be team owners, GMs, scouts, and coaches. They could use this analysis to evaluate their own teams and decide what side(s) of the ball need improvement. Improvement can be accomplished by drafting players in key positions, trading for a player or players during the season, or signing free agents who could also help their team. However, the players are not
