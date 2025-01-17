@@ -8,15 +8,15 @@ For this project I wanted to analyze all 32 NFL teams' stats from the 2018 seaso
 - [Google Sheets](https://www.google.com/sheets/about/) - A web-based spreadsheet application in the Google Docs Editor Suite
 
 
-# Step 1.
+# Ask
 The first step was identifying the problem(s) or question(s) that needed to be answered with this analysis. The questions were:
   - Who are the most winningest and losing teams in the NFL?
   - What stats are common among the aforementioned teams? 
 
-# Step 2.
+# Prepare
 The second step was figuring out what data was needed for this analysis, as I wanted to gather quantitative team data so that the stats aren't biased based off of star players on teams. So, I did some research and found the [NFL Team Stats 2002 - Feb. 2023 (ESPN)](https://www.kaggle.com/datasets/cviaxmiwnptr/nfl-team-stats-20022019-espn) dataset on Kaggle.  The data was then cleaned in Google Sheets, stored as .csv file and then imported into Google Cloud BiqQuery for further analysis. 
 
-# Step 3.
+# Process
 The third step involved cleaning and manipulating the data to get the stats needed for the analysis. I started this step by importing the data into Google Sheets and analyzing what columns were needed for the calculations. I then removed rows that had a date before 09/01/2018 to get the relevant rows for the sample. Next, I used the RIGHT() function to transform the string values into two integers. The following stats are in the format:
   
   orig_stat - > new_stat_1 & new_stat_2
@@ -52,7 +52,7 @@ The following were the rest of the stats used for this analysis:
   - def_st_td_home & turnovers_home
 
 
-# Step 4.
+# Analyze
 Now that the data is cleaned, we are going to import the .csv file into Google Cloud BigQuery and use SQL to perform calculations and generate a new spreadsheet
 containing the following computed stats for each season:
   - team
@@ -85,7 +85,7 @@ is collected by using the date column in the WHERE clause of each subquery. The 
 
 
 
-# Step 5.
+# Share
 The results from the query above will now be exported to Google Sheets so that they can be shared in a more concise manner. A new tab was created in the spreadsheet to show the most winningest teams', highlighted in bright blue, and the rest of the leagues' (ROL) stat averages over the past five seasons. Conditional formatting was used to visualize the averages for each team, as well as compare the averages of the most winningest teams to the ROL. The AVERAGE function was used in the new tab to get the averages of each stat for each team using data from the imported spreadsheet, NFL_TEAM_STATS_2018_TO_2022, from Google BigQuery. The parameters passed in the function are the following:
   - NFL_TEAM_STATS_2018_TO_2022!C2: this represents the stat for a paricular team in the 2018 season
   - NFL_TEAM_STATS_2018_TO_2022!L2: this represents the stat for the same team in the 2019 season
@@ -105,7 +105,7 @@ Next, a 9x3 table with conditional formatting was created to compare the top 13 
 From the table above, the few stats that have a significant difference are 3rd and 4th down conversion percentage, redzone conversion percentage, and defense/special teams points. It's clear that the top 13 teams convert on more crucial downs to extend drives, as well as turn their drives into points near the goal line and score with their defense and special teams.
 
 
-# Step 6
+# Act
 The ideal stakeholders for this analysis would be team owners, GMs, scouts, and coaches. They could use this analysis to evaluate their own teams and decide what side(s) of the ball need improvement. Improvement can be accomplished by drafting players in key positions, trading for a player or players during the season, or signing free agents who could also help their team. However, the players are not
 the only factor in a team's success, as coaches and GM's should also be considered when rebuilding for success.
 
