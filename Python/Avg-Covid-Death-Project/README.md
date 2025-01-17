@@ -7,3 +7,7 @@ This project consists of a python script that will open and read a csv file, [Co
 - [csv](https://docs.python.org/3/library/csv.html) - reads and writes tabular data in CSV format
 - [math](https://docs.python.org/3/library/math.html) - allows access for mathematical functions used in project
 
+# Result
+
+The average age of someone dying from COVID-19 is: 73.5.
+The standard deviation of the mean is: 0.65.
