@@ -11,7 +11,7 @@ The first step was identifying the problem(s) or question(s) that needed to be a
  - What are the totals for the following product metrics: revenue, profit, total orders and return rate?
  - How close are the goals for monthly revenue, orders, and return rate?
  - What are the total number of orders by category?
- - What are the top 10 products and the most ordered and returned item?
+ - What are the top 10 products and the most ordered and returned items?
  - Are the revenue goals being achieved each month?
  - What are the total orders in each country?
  - What are the amount of orders by occupations and income levels?
