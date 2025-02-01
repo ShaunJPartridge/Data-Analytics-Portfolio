@@ -8,15 +8,15 @@ This data analysis involved tracking KPI's, compare regional performance, analyz
 # Ask
 The first step was identifying the problem(s) or question(s) that needed to be answered with this analysis. The questions were:
 
- - 1.) How is the company performing monthly and overall? *
- - 2.) How close are the goals for monthly revenue, orders, and return rate?
+ - How is the company performing monthly and overall?
+ - How close are the goals for monthly revenue, orders, and return rate?
  - What are the metrics for each product category?
  - Are the revenue goals being achieved each month?
  - What are the top 10 products?
  - Who are the top customers?
- - What are the most ordered and returned items? * 
- - What are the total orders in each country? * What country had the most orders?
- - What are the amount of orders by occupations and income levels? * What income levels and occupations made the most purchases?
+ - What are the most ordered and returned items? 
+ - What country had the most orders?
+ - What income levels and occupations made the most purchases?
 
 
 # Prepare
