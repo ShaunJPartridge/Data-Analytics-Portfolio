@@ -8,19 +8,19 @@ This data analysis involved tracking KPI's, compare regional performance, analyz
 # Ask
 The first step was identifying the problem(s) or question(s) that needed to be answered with this analysis. The questions were:
 
- - How is the company performing monthly and overall? *
- - How close are the goals for monthly revenue, ders, and return rate?
+ - 1.) How is the company performing monthly and overall? *
+ - 2.) How close are the goals for monthly revenue, orders, and return rate?
  - What are the metrics for each product category?
  - Are the revenue goals being achieved each month?
  - What are the top 10 products?
  - Who are the top customers?
- - What are the most ordered and returned items?
- - What are the total orders in each country?
- - What are the amount of orders by occupations and income levels?
+ - What are the most ordered and returned items? * 
+ - What are the total orders in each country? * What country had the most orders?
+ - What are the amount of orders by occupations and income levels? * What income levels and occupations made the most purchases?
 
 
 # Prepare
-The second step involved creating data models that organized and structured the data from multiple files by creating relationships between fact and dimensional tables, allowing for efficient analysis and insightful visualizations by establishing clear connections between different data points. In regards to tracking the company's overall performance, the following product metrics were considered: revenue, profit, total orders, and return rate. KPI's were used to measure the monthly goals of the aforementioned metrics. The top products and customers were considered either by total sold, revenue, or return percentage. Measures were created and used to calculate: the most ordered and returned items, total orders by country, and orders by occupation and income.
+The second step was organizing and structuring the data from multiple files using data models. Three were made to create relationships between the fact and dimensional tables, allowing for efficient analysis and insighful visualizations by establishing clear connections between different data points. The metrics that will be used throughout this analysis and help answer the questions above are: revenue, profit, total orders, and return rate. To visualize these metrics, KPI's and charts will be used to track the company's performance and cards and tables for top categorial visualizations.
 
 # Process 
 
