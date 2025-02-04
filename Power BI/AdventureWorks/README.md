@@ -20,10 +20,19 @@ The first step was identifying the problem(s) or question(s) that needed to be a
 
 
 # Prepare
-The second step was organizing and structuring the data from multiple files using data models. Three were made to create relationships between the fact and dimensional tables, allowing for efficient analysis and insighful visualizations by establishing clear connections between different data points. The metrics that will be used throughout this analysis and help answer the questions above are: revenue, profit, total orders, and return rate. To visualize these metrics, KPI's and charts will be used to track the company's performance and cards and tables for top categorial visualizations.
+The second step was organizing and structuring the data from multiple files using data models. Three were made to create relationships between the fact and dimensional tables, allowing for efficient analysis and insighful visualizations by establishing clear connections between different data points. The metrics that will be used throughout this analysis and help answer the questions above are: revenue, profit, total orders, and return rate. To visualize these metrics, KPI's and charts will be used to track the company's performance and cards and tables will display category visualizations.
 
 # Process 
-
+The third step involved cleaning and manipulating the data using M code in the Power Query Editor and DAX in table view. In the Power Query Editor, the first step was to create column headers by promoting the first row of data in each table. After making column headers, some of the columns were either deleted or have data types manipulated so that the data could be more intuitive as well as easier to use for calculations. The following steps were created to make new calculated columns using M code's Date/Time functions:
+ - Day Name
+ - Start of Week, Month, and Quarter
+ - Month and Month Name
+ - Start of Year and Year
+In table view, columns were formatted intuitvely to the data they contained, such as those containing currency as strings and changing it to a decimal or whole number. DAX function were used to create the following calculated columns:
+ - Customer Full Name
+ - Income Level
+ - Customer Priority
+ - Education Category
 
 # Analyze
 
