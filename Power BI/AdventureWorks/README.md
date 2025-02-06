@@ -29,7 +29,7 @@ The third step involved cleaning and manipulating the data using M code in the P
  - Month and Month Name
  - Start of Year and Year
 
-In table view, columns were formatted intuitvely to the data they contained, such as those containing currency as strings and changing it to a decimal or whole number. DAX function were used to create the following calculated columns:
+In table view, columns were formatted intuitvely to the data they contained, such as those containing currency as strings and changing it to a decimal or whole number. DAX function were also used to create the following calculated columns:
  - Customer Full Name
  - Income Level
  - Customer Priority
