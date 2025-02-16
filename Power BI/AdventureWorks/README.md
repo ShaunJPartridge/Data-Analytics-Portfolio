@@ -43,7 +43,13 @@ After cleaning the data, several DAX measures were created in report view to hel
  - Price Adjustment %, Adjusted Profit
  - Total Customers, Avg Revenue Per Customer, Total Orders (Customer Detail), Total Revenue (Customer Detail)
 
-The measure table below was created to keep all of the measures in one location for organizational purposes.
+The measure table below was created to keep all of the measures in one location for organizational purposes. 
+
+![Screenshot 2025-02-15 181553](https://github.com/user-attachments/assets/9d16ebae-38b1-45d9-9b90-285004ef875d)
+
+The Total Orders and Revenue (Customer Detail) columns are blank because they are displayed using the page filter seen below. 
+
+![Screenshot 2025-02-15 191506](https://github.com/user-attachments/assets/4dc79311-741f-45b8-9b00-f549ff111b71)
 
 
 
