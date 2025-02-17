@@ -103,3 +103,4 @@ Another interesting observation was that as the amount of customers increased ov
 
 
 # Act
+There are a couple calls to action now for upper management to drive sales and increase revenue. One is to expand their customer base in more countries. This can be done with advertising to a wider audience and opening more locations in other countries. Two, is adjusting to the customers and market to drive more revenue per customer. This can be acheived by identifying different customer segments and tailoring marketing and pricing strategies to their needs.
