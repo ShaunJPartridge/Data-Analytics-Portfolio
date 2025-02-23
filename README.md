@@ -15,9 +15,5 @@ This repo consists of my projects done with the following technologies: SQL, Goo
 ## Python
 [Average Age of COVID-19 Deaths](https://github.com/ShaunJPartridge/Data-Analytics-Portfolio/tree/main/Python/Avg-Covid-Death-Project)
 
-## Tableau
-Loading...
-
-
 ## Power BI
 [Adventure Works]()
