@@ -71,7 +71,7 @@ The top 10 performing products were visualized in a table. However, this table s
  </tr>
 </table>
 
-Since Adventure Works is a global company, a map dashboard was used to illustrate the proportion of orders in each country they have customers in. 
+Since Adventure Works is a global company, a map dashboard was used to illustrate the proportion of orders in each country that they do business in. 
 
 ![image](https://github.com/user-attachments/assets/14f07a8a-0d72-4dff-9c2c-70bb5d96ab85)
 
