@@ -1,0 +1,42 @@
+{
+  "id": "mustafakeser4/bigquery-churn-dataset",
+  "id_no": 5560725,
+  "datasetSlugNullable": "bigquery-churn-dataset",
+  "ownerUserNullable": "mustafakeser4",
+  "usabilityRatingNullable": 1.0,
+  "titleNullable": "BigQuery Churn Dataset",
+  "subtitleNullable": "Predict and analyze customer churn using telecom usage and service data.",
+  "descriptionNullable": "# BigQuery Churn Dataset\n### Dataset Summary:\nThe Telco Customer Churn dataset, imported from the BigQuery table `cloud-training-demos.bqml_accelerator.telco_customer_churn_train`, provides data related to customers of a telecommunications company. The dataset is designed to predict customer churn, which is when customers stop using the company's services. The data includes various customer attributes, such as account information, usage metrics, and services used, along with a label indicating whether the customer churned.\n\n### Column Explanations:\n- **customer_id**: Unique identifier for each customer.\n- **state**: The U.S. state in which the customer resides.\n- **account_length**: Duration in days that the customer has been with the company.\n- **area_code**: The area code of the customer's phone number.\n- **international_plan**: Whether the customer has an international calling plan (True/False).\n- **voice_mail_plan**: Whether the customer has a voice mail service (True/False).\n- **number_vmail_messages**: Number of voice mail messages the customer has.\n- **total_day_minutes**: Total number of minutes the customer has used during the day.\n- **total_day_calls**: Total number of calls made by the customer during the day.\n- **total_day_charge**: Total charges incurred by the customer for day-time calls.\n- **total_eve_minutes**: Total number of minutes the customer has used during the evening.\n- **total_eve_calls**: Total number of calls made by the customer during the evening.\n- **total_eve_charge**: Total charges incurred by the customer for evening calls.\n- **total_night_minutes**: Total number of minutes the customer has used during the night.\n- **total_night_calls**: Total number of calls made by the customer during the night.\n- **total_night_charge**: Total charges incurred by the customer for night-time calls.\n- **total_intl_minutes**: Total number of minutes the customer has used for international calls.\n- **total_intl_calls**: Total number of international calls made by the customer.\n- **total_intl_charge**: Total charges incurred by the customer for international calls.\n- **number_customer_service_calls**: Number of calls made by the customer to customer service.\n- **churn**: Indicates whether the customer has churned (True/False).\n\n### Possible Analyses:\n1. **Churn Prediction**: Use machine learning models to predict whether a customer is likely to churn based on the other features.\n2. **Customer Segmentation**: Segment customers based on their usage patterns (e.g., high vs. low usage) and identify profiles that are more likely to churn.\n3. **Feature Importance**: Analyze which features are most predictive of customer churn, such as usage patterns or customer service interactions.\n4. **Service Plan Impact**: Study the impact of having an international plan or a voice mail plan on customer retention.\n5. **Call and Usage Patterns**: Explore patterns in call and usage data (e.g., total minutes and charges) to identify trends related to churn.\n6. **Customer Lifetime Value**: Estimate the lifetime value of customers based on their account length and usage to prioritize retention efforts.\n7. **Behavioral Analysis**: Analyze customer service call patterns to understand if frequent calls are associated with higher churn rates.",
+  "datasetId": 5560725,
+  "datasetSlug": "bigquery-churn-dataset",
+  "hasDatasetSlug": true,
+  "ownerUser": "mustafakeser4",
+  "hasOwnerUser": true,
+  "usabilityRating": 1.0,
+  "hasUsabilityRating": true,
+  "totalViews": 1220,
+  "totalVotes": 3,
+  "totalDownloads": 157,
+  "title": "BigQuery Churn Dataset",
+  "hasTitle": true,
+  "subtitle": "Predict and analyze customer churn using telecom usage and service data.",
+  "hasSubtitle": true,
+  "description": "# BigQuery Churn Dataset\n### Dataset Summary:\nThe Telco Customer Churn dataset, imported from the BigQuery table `cloud-training-demos.bqml_accelerator.telco_customer_churn_train`, provides data related to customers of a telecommunications company. The dataset is designed to predict customer churn, which is when customers stop using the company's services. The data includes various customer attributes, such as account information, usage metrics, and services used, along with a label indicating whether the customer churned.\n\n### Column Explanations:\n- **customer_id**: Unique identifier for each customer.\n- **state**: The U.S. state in which the customer resides.\n- **account_length**: Duration in days that the customer has been with the company.\n- **area_code**: The area code of the customer's phone number.\n- **international_plan**: Whether the customer has an international calling plan (True/False).\n- **voice_mail_plan**: Whether the customer has a voice mail service (True/False).\n- **number_vmail_messages**: Number of voice mail messages the customer has.\n- **total_day_minutes**: Total number of minutes the customer has used during the day.\n- **total_day_calls**: Total number of calls made by the customer during the day.\n- **total_day_charge**: Total charges incurred by the customer for day-time calls.\n- **total_eve_minutes**: Total number of minutes the customer has used during the evening.\n- **total_eve_calls**: Total number of calls made by the customer during the evening.\n- **total_eve_charge**: Total charges incurred by the customer for evening calls.\n- **total_night_minutes**: Total number of minutes the customer has used during the night.\n- **total_night_calls**: Total number of calls made by the customer during the night.\n- **total_night_charge**: Total charges incurred by the customer for night-time calls.\n- **total_intl_minutes**: Total number of minutes the customer has used for international calls.\n- **total_intl_calls**: Total number of international calls made by the customer.\n- **total_intl_charge**: Total charges incurred by the customer for international calls.\n- **number_customer_service_calls**: Number of calls made by the customer to customer service.\n- **churn**: Indicates whether the customer has churned (True/False).\n\n### Possible Analyses:\n1. **Churn Prediction**: Use machine learning models to predict whether a customer is likely to churn based on the other features.\n2. **Customer Segmentation**: Segment customers based on their usage patterns (e.g., high vs. low usage) and identify profiles that are more likely to churn.\n3. **Feature Importance**: Analyze which features are most predictive of customer churn, such as usage patterns or customer service interactions.\n4. **Service Plan Impact**: Study the impact of having an international plan or a voice mail plan on customer retention.\n5. **Call and Usage Patterns**: Explore patterns in call and usage data (e.g., total minutes and charges) to identify trends related to churn.\n6. **Customer Lifetime Value**: Estimate the lifetime value of customers based on their account length and usage to prioritize retention efforts.\n7. **Behavioral Analysis**: Analyze customer service call patterns to understand if frequent calls are associated with higher churn rates.",
+  "hasDescription": true,
+  "isPrivate": false,
+  "keywords": [
+    "business",
+    "classification",
+    "clustering",
+    "tabular"
+  ],
+  "licenses": [
+    {
+      "nameNullable": "MIT",
+      "name": "MIT",
+      "hasName": true
+    }
+  ],
+  "collaborators": [],
+  "data": []
+}
