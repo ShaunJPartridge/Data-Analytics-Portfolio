@@ -20,6 +20,7 @@ file_name = 'churn.csv'
 local_path = f'./{file_name}'
 project_id = 'amazon-deliveries-project'
 dataset_id = 'customer_churn_data'
+table_id = 'external_churn_table'
 
 # Download the dataset
 kaggle.api.dataset_download_files(dataset, path='.', unzip=True)
@@ -61,6 +62,43 @@ def create_view(table_id):
 
     print(f'Created view {view_id}')
 
+# Function to create/update a clean native BigQuery table to be connected to in Power BI,
+# using the external table, upon being triggered by the dataset being updated in the GCS bucket.
+def gcs_triggered_cleaning(event, context):
+
+    Client = bigquery.Client(credentials=credentials, project=project_id)
+
+    # BigQuery SQL to clean and copy the data
+    query = """
+        CREATE OR REPLACE TABLE `{project_id}.{dataset_id}.churn` AS
+        SELECT
+            TRIM(LOWER(customer_id)) AS customer_id,
+            state,
+            SAFE_CAST(account_length AS INT64) AS account_length,
+            CASE WHEN international_plan = FALSE THEN 'No' ELSE 'Yes' END AS international_plan,
+            CASE WHEN voice_mail_plan = FALSE THEN 'No' ELSE 'Yes' END AS voice_mail_plan,
+            SAFE_CAST(total_day_minutes AS FLOAT64) AS total_day_minutes,
+            SAFE_CAST(total_day_calls AS INT64) AS total_day_calls,
+            SAFE_CAST(total_day_charge AS FLOAT64) AS total_day_charge,
+            SAFE_CAST(total_eve_minutes AS FLOAT64) AS total_eve_minutes,
+            SAFE_CAST(total_eve_calls AS INT64) AS total_eve_calls,
+            SAFE_CAST(total_eve_charge AS FLOAT64) AS total_eve_charge,
+            SAFE_CAST(total_night_minutes AS FLOAT64) AS total_night_minutes,
+            SAFE_CAST(total_night_calls AS INT64) AS total_night_calls,
+            SAFE_CAST(total_night_charge AS FLOAT64) AS total_night_charge,
+            SAFE_CAST(total_intl_minutes AS FLOAT64) AS total_intl_minutes,
+            SAFE_CAST(total_intl_calls AS INT64) AS total_intl_calls,
+            SAFE_CAST(total_intl_charge AS FLOAT64) AS total_intl_charge,
+            SAFE_CAST(number_customer_service_calls AS INT64) AS number_customer_service_calls,            
+            SAFE_CAST(churn AS INT64) AS churn
+        FROM `{project_id}.{dataset_id}.{table_id}`
+    """
+
+    query_job = Client.query(query)
+    query_job.result()
+
+    print("Cleaned table successfully updated.")
+
 
 # Function to load the data into BigQuery using an External table
 def create_table():
@@ -69,7 +107,6 @@ def create_table():
     Client = bigquery.Client(credentials=credentials, project=project_id)
 
     # Define table name, ref, and the GCS URI of the file
-    table_id = 'external_churn_table'
     table_ref = f'{project_id}.{dataset_id}.{table_id}'
     data_uri = f'gs://{bucket_name}/{blob_name}'
 
@@ -99,8 +136,11 @@ def create_table():
         created_table = Client.create_table(table)
         print(f'Created new table: {created_table.table_id}')
 
+    # Clean the table
+    gcs_triggered_cleaning()
+
     # Create the view so the data can be accessed in Power BI
-    create_view(table_id)
+    #create_view(table_id)
 
 
 if __name__ == "__main__":
