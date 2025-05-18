@@ -3,7 +3,6 @@ from google.cloud import storage
 from google.cloud import bigquery
 from dotenv import load_dotenv
 import kaggle
-import os
 import pandas as pd
 
 # Initialize credentials path and object to access GCP resources
@@ -81,7 +80,7 @@ def create_final_table():
     external_table = bigquery.Table(external_table_id)
     external_table.external_data_configuration = external_job_config
     client.create_table(external_table, exists_ok=True)
-    
+
     print(f'External table {external_table_id} created.')
 
     # Clean and transform into the final table
