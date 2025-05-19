@@ -21,11 +21,11 @@ external_table = ''
 final_table = f'{dataset_id}.churn_cleaned'
 
 
-def get_data():
-    """
+"""
     Function to download the dataset from Kaggle and upload it to Google Cloud Storage (GCS).
     This function uses the Kaggle API to download the dataset and then uploads it to a specified GCS bucket.
-    """
+"""
+def get_data():
 
     # Authenticate with Kaggle API
     kaggle.api.authenticate()
@@ -52,7 +52,15 @@ def get_data():
     print(f'{bucket_name} was successfully updated.')
 
 
+"""
+    Function to create a query string for transforming the external table data.
+    This function generates a SQL query string that performs various transformations on the data,
+    including aggregating total minutes, calls, and charges for each customer.
+    The query also includes case statements to categorize customers into different tiers based on their usage.
+"""
 def get_query_string(ext_table_id, ext_table):
+
+    # Define the SQL query string
     return f"""
         WITH getTotals AS (
             SELECT  
@@ -98,14 +106,14 @@ def get_query_string(ext_table_id, ext_table):
     """
 
 
-def create_final_table():
-    """
+"""
     Function to create external configurations and table, and final table for BigQuery.
     This function creates an external table in BigQuery that points to a CSV file in Google Cloud Storage (GCS).
     The CSV file is expected to have a header row, and the function will skip this row when reading the data.
     The external table is then used to transform the data and create a final native table in BigQuery.
     The final table is then connected to in Power BI for analysis.
-    """
+"""
+def create_final_table():
 
     # Initialize BigQuery client
     client = bigquery.Client(credentials=credentials, project=project_id)
