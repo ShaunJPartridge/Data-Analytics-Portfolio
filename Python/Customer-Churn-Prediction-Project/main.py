@@ -18,7 +18,7 @@ project_id = 'amazon-deliveries-project'
 dataset_id = 'customer_churn_data'
 bucket_name = 'customer_churn_project_bucket'
 external_table = ''
-final_table = f'{dataset_id}.churn'
+final_table = f'{dataset_id}.churn_cleaned'
 
 
 def get_data():
@@ -52,6 +52,52 @@ def get_data():
     print(f'{bucket_name} was successfully updated.')
 
 
+def get_query_string(ext_table_id, ext_table):
+    return f"""
+        WITH getTotals AS (
+            SELECT  
+                customer_id,
+                TRUNC(SAFE_CAST(SUM(total_day_minutes + total_eve_minutes + total_intl_minutes + total_night_minutes) AS FLOAT64), 2) AS total_minutes,
+                SAFE_CAST(SUM(total_day_calls + total_eve_calls + total_intl_calls + total_night_calls) AS INT64) AS total_calls,
+                TRUNC(SAFE_CAST(SUM(total_day_charge + total_eve_charge + total_intl_charge + total_night_charge) AS FLOAT64), 2) AS total_charges
+            FROM `{ext_table_id}`
+            GROUP BY customer_id
+        )
+        
+        SELECT
+            TRIM(LOWER(final.customer_id)) AS customer_id,
+            state,
+            SAFE_CAST(account_length AS INT64) AS account_length,
+            CASE WHEN international_plan = FALSE THEN 'No' ELSE 'Yes' END AS international_plan,
+            CASE WHEN voice_mail_plan = FALSE THEN 'No' ELSE 'Yes' END AS voice_mail_plan,
+            SAFE_CAST(total_day_minutes AS FLOAT64) AS total_day_minutes,
+            SAFE_CAST(total_day_calls AS INT64) AS total_day_calls,
+            SAFE_CAST(total_day_charge AS FLOAT64) AS total_day_charge,
+            SAFE_CAST(total_eve_minutes AS FLOAT64) AS total_eve_minutes,
+            SAFE_CAST(total_eve_calls AS INT64) AS total_eve_calls,
+            SAFE_CAST(total_eve_charge AS FLOAT64) AS total_eve_charge,
+            SAFE_CAST(total_night_minutes AS FLOAT64) AS total_night_minutes,
+            SAFE_CAST(total_night_calls AS INT64) AS total_night_calls,
+            SAFE_CAST(total_night_charge AS FLOAT64) AS total_night_charge,
+            SAFE_CAST(total_intl_minutes AS FLOAT64) AS total_intl_minutes,
+            SAFE_CAST(total_intl_calls AS INT64) AS total_intl_calls,
+            SAFE_CAST(total_intl_charge AS FLOAT64) AS total_intl_charge,
+            SAFE_CAST(number_customer_service_calls AS INT64) AS number_customer_service_calls,            
+            SAFE_CAST(churn AS INT64) AS churn,
+            gt.total_minutes,
+            gt.total_calls,
+            gt.total_charges,
+            CASE 
+                WHEN gt.total_minutes <= 300 THEN 'Light User'
+                WHEN gt.total_minutes > 300 AND gt.total_minutes <= 400 THEN 'Moderate User' 
+                ELSE 'Heavy User' 
+            END AS tier
+        FROM `{ext_table}` final
+        LEFT JOIN getTotals gt
+        ON final.customer_id = gt.customer_id
+    """
+
+
 def create_final_table():
     """
     Function to create external configurations and table, and final table for BigQuery.
@@ -83,33 +129,10 @@ def create_final_table():
 
     print(f'External table {external_table_id} created.')
 
-    # Clean and transform into the final table
-    query = f"""
-        CREATE OR REPLACE TABLE `{final_table}` AS
-        SELECT
-            TRIM(LOWER(customer_id)) AS customer_id,
-            state,
-            SAFE_CAST(account_length AS INT64) AS account_length,
-            CASE WHEN international_plan = FALSE THEN 'No' ELSE 'Yes' END AS international_plan,
-            CASE WHEN voice_mail_plan = FALSE THEN 'No' ELSE 'Yes' END AS voice_mail_plan,
-            SAFE_CAST(total_day_minutes AS FLOAT64) AS total_day_minutes,
-            SAFE_CAST(total_day_calls AS INT64) AS total_day_calls,
-            SAFE_CAST(total_day_charge AS FLOAT64) AS total_day_charge,
-            SAFE_CAST(total_eve_minutes AS FLOAT64) AS total_eve_minutes,
-            SAFE_CAST(total_eve_calls AS INT64) AS total_eve_calls,
-            SAFE_CAST(total_eve_charge AS FLOAT64) AS total_eve_charge,
-            SAFE_CAST(total_night_minutes AS FLOAT64) AS total_night_minutes,
-            SAFE_CAST(total_night_calls AS INT64) AS total_night_calls,
-            SAFE_CAST(total_night_charge AS FLOAT64) AS total_night_charge,
-            SAFE_CAST(total_intl_minutes AS FLOAT64) AS total_intl_minutes,
-            SAFE_CAST(total_intl_calls AS INT64) AS total_intl_calls,
-            SAFE_CAST(total_intl_charge AS FLOAT64) AS total_intl_charge,
-            SAFE_CAST(number_customer_service_calls AS INT64) AS number_customer_service_calls,            
-            SAFE_CAST(churn AS INT64) AS churn
-        FROM `{external_table}`
-    """
+    # Get query string to clean and transform the final table
+    query = get_query_string(external_table_id, external_table)
 
-    client.query(query).result()
+    client.query(f"CREATE OR REPLACE TABLE `{project_id}.{final_table}` AS {query}").result()
     print(f'Cleaned data loaded into {final_table}')
 
 
