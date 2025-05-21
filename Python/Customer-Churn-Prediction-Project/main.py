@@ -97,7 +97,7 @@ def get_query_string(ext_table_id, ext_table):
             gt.total_charges,
             CASE 
                 WHEN gt.total_minutes <= 300 THEN 'Light User'
-                WHEN gt.total_minutes > 300 AND gt.total_minutes <= 400 THEN 'Moderate User' 
+                WHEN gt.total_minutes > 300 AND gt.total_minutes < 450 THEN 'Moderate User' 
                 ELSE 'Heavy User' 
             END AS tier
         FROM `{ext_table}` final
