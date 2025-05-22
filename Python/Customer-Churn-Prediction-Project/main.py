@@ -18,7 +18,7 @@ project_id = 'amazon-deliveries-project'
 dataset_id = 'customer_churn_data'
 bucket_name = 'customer_churn_project_bucket'
 external_table = ''
-final_table = f'{dataset_id}.churn_cleaned'
+final_table = f'{dataset_id}.churn_features'
 
 
 """
@@ -78,28 +78,11 @@ def get_query_string(ext_table_id, ext_table):
             SAFE_CAST(account_length AS INT64) AS account_length,
             CASE WHEN international_plan = FALSE THEN 'No' ELSE 'Yes' END AS international_plan,
             CASE WHEN voice_mail_plan = FALSE THEN 'No' ELSE 'Yes' END AS voice_mail_plan,
-            SAFE_CAST(total_day_minutes AS FLOAT64) AS total_day_minutes,
-            SAFE_CAST(total_day_calls AS INT64) AS total_day_calls,
-            SAFE_CAST(total_day_charge AS FLOAT64) AS total_day_charge,
-            SAFE_CAST(total_eve_minutes AS FLOAT64) AS total_eve_minutes,
-            SAFE_CAST(total_eve_calls AS INT64) AS total_eve_calls,
-            SAFE_CAST(total_eve_charge AS FLOAT64) AS total_eve_charge,
-            SAFE_CAST(total_night_minutes AS FLOAT64) AS total_night_minutes,
-            SAFE_CAST(total_night_calls AS INT64) AS total_night_calls,
-            SAFE_CAST(total_night_charge AS FLOAT64) AS total_night_charge,
-            SAFE_CAST(total_intl_minutes AS FLOAT64) AS total_intl_minutes,
-            SAFE_CAST(total_intl_calls AS INT64) AS total_intl_calls,
-            SAFE_CAST(total_intl_charge AS FLOAT64) AS total_intl_charge,
-            SAFE_CAST(number_customer_service_calls AS INT64) AS number_customer_service_calls,            
-            SAFE_CAST(churn AS INT64) AS churn,
             gt.total_minutes,
             gt.total_calls,
             gt.total_charges,
-            CASE 
-                WHEN gt.total_minutes <= 300 THEN 'Light User'
-                WHEN gt.total_minutes > 300 AND gt.total_minutes < 450 THEN 'Moderate User' 
-                ELSE 'Heavy User' 
-            END AS tier
+            SAFE_CAST(number_customer_service_calls AS INT64) AS number_customer_service_calls,            
+            SAFE_CAST(churn AS INT64) AS churn
         FROM `{ext_table}` final
         LEFT JOIN getTotals gt
         ON final.customer_id = gt.customer_id
@@ -111,7 +94,7 @@ def get_query_string(ext_table_id, ext_table):
     This function creates an external table in BigQuery that points to a CSV file in Google Cloud Storage (GCS).
     The CSV file is expected to have a header row, and the function will skip this row when reading the data.
     The external table is then used to transform the data and create a final native table in BigQuery.
-    The final table is then connected to in Power BI for analysis.
+    The final table, (churn_features) is then connected to in Power BI for analysis.
 """
 def create_final_table():
 
