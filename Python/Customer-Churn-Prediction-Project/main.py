@@ -56,7 +56,6 @@ def get_data():
     Function to create a query string for transforming the external table data.
     This function generates a SQL query string that performs various transformations on the data,
     including aggregating total minutes, calls, and charges for each customer.
-    The query also includes case statements to categorize customers into different tiers based on their usage.
 """
 def get_query_string(ext_table_id, ext_table):
 
