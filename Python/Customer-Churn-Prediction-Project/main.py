@@ -2,7 +2,6 @@ from google.oauth2 import service_account
 from google.cloud import storage
 from google.cloud import bigquery
 from dotenv import load_dotenv
-import opendatasets as od 
 import kaggle
 import pandas as pd
 
