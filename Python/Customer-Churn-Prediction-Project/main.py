@@ -2,6 +2,7 @@ from google.oauth2 import service_account
 from google.cloud import storage
 from google.cloud import bigquery
 from dotenv import load_dotenv
+import opendatasets as od 
 import kaggle
 import pandas as pd
 
@@ -38,7 +39,7 @@ def get_data():
 
     # Read in .csv file into dataframe
     df = pd.read_csv(local_path)
-
+    
     # Set values for GCS bucket and blob name
     blob_name = file_name
     df.to_csv(blob_name, index=False)
