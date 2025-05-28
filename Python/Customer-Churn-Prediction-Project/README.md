@@ -11,37 +11,37 @@ To solve this, I'm proposing a proactive solution to predict at-risk customers u
 
 ### 2. Collect & Store Data
 
-The dataset will be scraped from an online source, Kaggle, and cleaned using a Python script.
+The dataset will be scraped from an online source, [Kaggle](https://www.kaggle.com/datasets/mustafakeser4/bigquery-churn-dataset/data), and cleaned using a Python script.
 
 In this script:
 
-Kaggle's API and pandas are used to authenticate the connection, extract the .csv file from the repository, and read it into a pandas DataFrame.
+- Kaggle's API and pandas are used to authenticate the connection, extract the `.csv` file from the repository, and read it into a pandas DataFrame.
 
-It is then transformed back into a .csv file for the blob used to write to the GCS bucket.
+- It is then transformed back into a `.csv` file for the blob used to write to the GCS bucket.
 
-An instance of GCP's Storage client is initialized to gain access to the GCS bucket and upload the data.
+- An instance of GCP's Storage client is initialized to gain access to the GCS bucket and upload the data.
 
-Once uploaded, an external BigQuery table is created by retrieving the dataset from the GCS bucket.
+- Once uploaded, an external BigQuery table is created by retrieving the dataset from the GCS bucket.
 
-This table serves as a reference to create/update the final churn-features table, which is used to train the ML models and analyze in Power BI. In BigQuery, scheduled queries train the models and store results in native tables. Only the predictions from the most accurate model are analyzed in Power BI.
+This table serves as a reference to create/update the final `churn-features` table, which is used to train the ML models and analyze in Power BI. In BigQuery, scheduled queries train the models and store results in native tables. Only the predictions from the most accurate model are analyzed in Power BI.
 
 Insert DFD screenshot here.
 
 ### 3. Clean & Prepare Data
 
-Use Kaggle API and pandas to read in the dataset, and SQL to transform values, normalize features, and engineer churn indicators (total_minutes, total_charges, total_calls, vm_plan, int_plan, tier).
+Use Kaggle API and pandas to read in the dataset, and SQL to transform values, normalize features, and engineer churn indicators (`total_minutes`, `total_charges`, `total_calls`, `vm_plan`, `int_plan`, `tier`).
 
 **Data Cleaning & Transformations:**
 
-Columns international_plan, voice_mail_plan, and churn are cast from boolean to INT64 for the ML model.
+Columns `international_plan`, `voice_mail_plan`, and `churn` are cast from boolean to INT64 for the ML model.
 
-The function get_query_string does 90% of the transformation work.
+The function `get_query_string` does 90% of the transformation work.
 
-The getTotals CTE aggregates totals using SAFE_CAST and TRUNC to ensure precision.
+The `getTotals` CTE aggregates totals using `SAFE_CAST` and `TRUNC` to ensure precision.
 
-Trailing white spaces in customer_id are removed.
+Trailing white spaces in `customer_id` are removed.
 
-international_plan and voice_mail_plan are transformed for better readability in dashboard slicers.
+`international_plan` and `voice_mail_plan` are transformed for better readability in dashboard slicers.
 
 Insert get_query_string function screenshot here.
 Insert create query function screenshot here.
@@ -50,9 +50,9 @@ Remaining transformations are handled in scheduled BigQuery queries.
 
 **Modeling:**
 
-Logistic Regression was chosen for its simplicity and scalability but only achieved 77.48% accuracy.
+- Logistic Regression was chosen for its simplicity and scalability but only achieved 77.48% accuracy.
 
-Gradient Boosted Trees achieved 96.68% accuracy and was chosen as the final model.
+- Gradient Boosted Trees achieved 96.68% accuracy and was chosen as the final model.
 
 Customers are segmented by churn probability into tiers:
 
@@ -74,37 +74,11 @@ A star-schema data model was used to ensure filters apply correctly across visua
 
 **Service Usage by Risk Tier**
 
-**Risk Tier**
-
-**Total Charges**
-
-**Total Calls**
-
-**Total Minutes**
-
-Low-Risk
-
-$217,470.00
-
-1,132,727
-
-2,172,621.66
-
-High-Risk
-
-$28,923.83
-
-128,265
-
-277,934.72
-
-Medium-Risk
-
-$6,261.92
-
-32,494
-
-62,101.01
+| **Risk Tier** | **Total Charges** | **Total Calls** | **Total Minutes** |
+| --- | --- | --- | --- |
+| Low-Risk | $217,470.00 | 1,132,727 | 2,172,621.66 |
+| High-Risk | $28,923.83 | 128,265 | 277,934.72 |
+| Medium-Risk | $6,261.92 | 32,494 | 62,101.01 |
 
 Insert screenshot here.
 
@@ -140,27 +114,27 @@ High-Risk customers consistently churn at rates near or at 100%, especially thos
 
 Voicemail plans are linked to lower churn rates, especially among Low and Medium-Risk groups.
 
-International plans are a strong churn predictor with over 42% churn.
+International plans are a strong churn predictor, with over 42% of customers churning.
 
 New Jersey frequently appears with the highest churn rate.
 
 ### Strategic Recommendations
 
-**Prioritize Retention for Medium and High-Risk Segments**
+1. **Prioritize Retention for Medium and High-Risk Segments**
 
-Focus on targeted outreach: retention offers, proactive support, loyalty rewards.
+   Focus on targeted outreach: retention offers, proactive support, loyalty rewards.
 
-**Enhance International Plan Offerings**
+2. **Enhance International Plan Offerings**
 
-Bundle voicemail services or offer discounts for combined plans.
+   Bundle voicemail services or offer discounts for combined plans.
 
-**Focus on At-Risk States**
+3. **Focus on At-Risk States**
 
-Target retention in New Jersey, Maine, New Hampshire. Investigate service or perception issues.
+   Target retention in New Jersey, Maine, New Hampshire. Investigate service or perception issues.
 
-**Drive Engagement in Low-Usage Segments**
+4. **Drive Engagement in Low-Usage Segments**
 
-Use personalized comms, onboarding support, and usage incentives.
+   Use personalized comms, onboarding support, and usage incentives.
 
 ### 5. Deploy & Monitor
 
