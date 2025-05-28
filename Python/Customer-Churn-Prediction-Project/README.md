@@ -31,28 +31,154 @@ Insert DFD screenshot here.
 
 Use Kaggle API and pandas to read in the dataset, and SQL to transform values, normalize features, and engineer churn indicators (`total_minutes`, `total_charges`, `total_calls`, `vm_plan`, `int_plan`, `tier`).
 
+The function below, get_data, uses Kaggle's API and pandas to extract and load the data into GCP.
+
+```
+def get_data():
+
+    # Authenticate with Kaggle API
+    kaggle.api.authenticate()
+
+    # Download the dataset
+    kaggle.api.dataset_download_files(dataset, path='.', unzip=True)
+
+    # Download the dataset metadata
+    kaggle.api.dataset_metadata(dataset, path='.')
+
+    # Read in .csv file into dataframe
+    df = pd.read_csv(local_path)
+    
+    # Set values for GCS bucket and blob name
+    blob_name = file_name
+    df.to_csv(blob_name, index=False)
+
+    # Initialize Storage client to access GCP storage bucket
+    client = storage.Client(credentials=credentials, project=project_id)
+    bucket = client.bucket(bucket_name)
+    blob = bucket.blob(blob_name)
+    blob.upload_from_filename(local_path)
+```
+
 **Data Cleaning & Transformations:**
 
-Columns `international_plan`, `voice_mail_plan`, and `churn` are cast from boolean to INT64 for the ML model.
+Columns, `international_plan`, `voice_mail_plan`, and `churn` are cast from boolean to INT64 for the ML model.
 
-The function `get_query_string` does 90% of the transformation work.
+The function below, `get_query_string`, does 90% of the transformation work.
+```
+def get_query_string(ext_table_id, ext_table):
+
+    # Define the SQL query string
+    return f"""
+        WITH getTotals AS (
+            SELECT  
+                customer_id,
+                TRUNC(SAFE_CAST(SUM(total_day_minutes + total_eve_minutes + total_intl_minutes + total_night_minutes) AS FLOAT64), 2) AS total_minutes,
+                SAFE_CAST(SUM(total_day_calls + total_eve_calls + total_intl_calls + total_night_calls) AS INT64) AS total_calls,
+                TRUNC(SAFE_CAST(SUM(total_day_charge + total_eve_charge + total_intl_charge + total_night_charge) AS FLOAT64), 2) AS total_charges
+            FROM `{ext_table_id}`
+            GROUP BY customer_id
+        )
+        
+        SELECT
+            TRIM(LOWER(final.customer_id)) AS customer_id,
+            state,
+            SAFE_CAST(account_length AS INT64) AS account_length,
+            CASE WHEN international_plan = FALSE THEN 'No' ELSE 'Yes' END AS international_plan,
+            CASE WHEN voice_mail_plan = FALSE THEN 'No' ELSE 'Yes' END AS voice_mail_plan,
+            gt.total_minutes,
+            gt.total_calls,
+            gt.total_charges,
+            SAFE_CAST(number_customer_service_calls AS INT64) AS number_customer_service_calls,            
+            SAFE_CAST(churn AS INT64) AS churn
+        FROM `{ext_table}` final
+        LEFT JOIN getTotals gt
+        ON final.customer_id = gt.customer_id
+    """
+```
 
 The `getTotals` CTE aggregates totals using `SAFE_CAST` and `TRUNC` to ensure precision.
 
 Trailing white spaces in `customer_id` are removed.
 
-`international_plan` and `voice_mail_plan` are transformed for better readability in dashboard slicers.
+`international_plan` and `voice_mail_plan` are transformed to 'Yes' or 'No' for better readability in dashboard slicers.
 
-Insert get_query_string function screenshot here.
-Insert create query function screenshot here.
+The final table, `churn_features` is created using the SQL string and BigQuery's query function.
 
-Remaining transformations are handled in scheduled BigQuery queries.
+```
+# Get query string to clean and transform the final table
+    query = get_query_string(external_table_id, external_table)
+
+    client.query(f"CREATE OR REPLACE TABLE `{project_id}.{final_table}` AS {query}").result()
+```
+
+Remaining transformations are handled in scheduled BigQuery queries and can be referenced below.
+
+Get the churn predictions using Logistic Regression
+```
+/*
+  This query will get the customers' predicted churn probability
+  using the Logistic Regression model.
+  
+  Note: Accessed customers' churn probability by indexing
+  the predicted_churn_probs array and getting the property,
+  prob, from the struct
+*/
+CREATE OR REPLACE TABLE `customer_churn_data.customer_churn_probs_lr` AS 
+SELECT
+  customer_id,
+  predicted_churn,
+  predicted_churn_probs[0].prob AS churn_probability,
+  CASE 
+    WHEN predicted_churn_probs[0].prob < .40 THEN "Low-Risk"
+    WHEN predicted_churn_probs[0].prob >= .40 AND predicted_churn_probs[0].prob < .70 THEN "Medium-Risk" ELSE "High-Risk"
+  END AS tier
+FROM ML.PREDICT(
+  MODEL `customer_churn_data.churn_model_logistic`,
+  (
+    SELECT *
+    FROM `customer_churn_data.churn_features`
+  )
+)
+ORDER BY churn_probability DESC;
+```
+
+Get the churn predictions using Gradient Boosted Trees
+```
+/*
+  This query will get customers' predicted churn probability
+  using the Gradient Boosted Tree model.
+  
+  Note: Accessed customers' churn probability by indexing
+  the predicted_churn_probs array and getting the property,
+  prob, from the struct
+*/
+CREATE OR REPLACE TABLE `customer_churn_data.customer_churn_probs_gbt` AS
+SELECT
+  customer_id,
+  predicted_churn,
+  predicted_churn_probs[0].prob AS churn_probability,
+  CASE 
+    WHEN predicted_churn_probs[0].prob < .40 THEN "Low-Risk"
+    WHEN predicted_churn_probs[0].prob >= .40 AND predicted_churn_probs[0].prob < .70 THEN "Medium-Risk" ELSE "High-Risk"
+  END AS tier
+ FROM ML.PREDICT(
+  MODEL `customer_churn_data.churn_model_boosted`,
+  (
+    SELECT *
+    FROM `customer_churn_data.churn_features`
+  )
+)
+ORDER BY churn_probability DESC;
+```      
 
 **Modeling:**
 
 - Logistic Regression was chosen for its simplicity and scalability but only achieved 77.48% accuracy.
 
 - Gradient Boosted Trees achieved 96.68% accuracy and was chosen as the final model.
+
+The performance results are below.
+![logistic regression model performance results](Python\Customer-Churn-Prediction-Project\photos\lr_model_results.png) ![gradient boosted tree model performance results](Python\Customer-Churn-Prediction-Project\photos\gbt_model_results.png)
 
 Customers are segmented by churn probability into tiers:
 
