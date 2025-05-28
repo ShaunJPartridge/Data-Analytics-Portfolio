@@ -25,7 +25,7 @@ In this script:
 
 This table serves as a reference to create/update the final `churn-features` table, which is used to train the ML models and analyze in Power BI. In BigQuery, scheduled queries train the models and store results in native tables. Only the predictions from the most accurate model are analyzed in Power BI.
 
-Insert DFD screenshot here.
+![Customer Churn ETL Process DFD](<photos/Customer Churn ETL Process DFD.drawio.png>)
 
 ### 3. Clean & Prepare Data
 
@@ -178,7 +178,9 @@ ORDER BY churn_probability DESC;
 - Gradient Boosted Trees achieved 96.68% accuracy and was chosen as the final model.
 
 The performance results are below.
-![logistic regression model performance results](Python\Customer-Churn-Prediction-Project\photos\lr_model_results.png) ![gradient boosted tree model performance results](Python\Customer-Churn-Prediction-Project\photos\gbt_model_results.png)
+
+<img src="photos/lr_model_results.png" style="width:45%; height:auto;"> <img src="photos/gbt_model_results.png" style="width:45%; height:auto;">
+
 
 Customers are segmented by churn probability into tiers:
 
