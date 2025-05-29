@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="telecom-customer-churn-analysis">Telecom Customer Churn Analysis</h1>
+<h2 id="data-analysis-process">Data Analysis Process</h2>
+<h3 id="1-define-the-problem">1. Define the Problem</h3>
+<p>Telecom Co., a US-based telecommunications company that offers national and international phone services, is experiencing a high volume of customers canceling their phone service, which is costing the company thousands of dollars in losses.</p>
+<p><strong>Identify Business Goal:</strong>
+To solve this, I'm proposing a proactive solution to predict at-risk customers using Logistic Regression and Gradient Boosted Tree machine learning models and take action to prevent them from churning.</p>
+<h3 id="2-collect--store-data">2. Collect &amp; Store Data</h3>
+<p>The dataset will be scraped from an online source, <a href="https://www.kaggle.com/datasets/mustafakeser4/bigquery-churn-dataset/data">Kaggle</a>, and cleaned using a Python script.</p>
+<p>In this script:</p>
+<ul>
+<li>
+<p>Kaggle's API and pandas are used to authenticate the connection, extract the <code>.csv</code> file from the repository, and read it into a pandas DataFrame.</p>
+</li>
+<li>
+<p>It is then transformed back into a <code>.csv</code> file for the blob used to write to the GCS bucket.</p>
+</li>
+<li>
+<p>An instance of GCP's Storage client is initialized to gain access to the GCS bucket and upload the data.</p>
+</li>
+<li>
+<p>Once uploaded, an external BigQuery table is created by retrieving the dataset from the GCS bucket.</p>
+</li>
+</ul>
+<p>This table serves as a reference to create/update the final <code>churn-features</code> table, which is used to train the ML models and analyze in Power BI. In BigQuery, scheduled queries train the models and store results in native tables. Only the predictions from the most accurate model are analyzed in Power BI.</p>
+<p><img src="photos/Customer Churn ETL Process DFD.drawio.png" alt="Customer Churn ETL Process DFD"></p>
+<h3 id="3-clean--prepare-data">3. Clean &amp; Prepare Data</h3>
+<p>Use Kaggle API and pandas to read in the dataset, and SQL to transform values, normalize features, and engineer churn indicators (<code>total_minutes</code>, <code>total_charges</code>, <code>total_calls</code>, <code>vm_plan</code>, <code>int_plan</code>, <code>tier</code>).</p>
+<p>The function below, get_data, uses Kaggle's API and pandas to extract and load the data into GCP.</p>
+<pre class="hljs"><code><div>def get_data():
+
+    # Authenticate with Kaggle API
+    kaggle.api.authenticate()
+
+    # Download the dataset
+    kaggle.api.dataset_download_files(dataset, path='.', unzip=True)
+
+    # Download the dataset metadata
+    kaggle.api.dataset_metadata(dataset, path='.')
+
+    # Read in .csv file into dataframe
+    df = pd.read_csv(local_path)
+    
+    # Set values for GCS bucket and blob name
+    blob_name = file_name
+    df.to_csv(blob_name, index=False)
+
+    # Initialize Storage client to access GCP storage bucket
+    client = storage.Client(credentials=credentials, project=project_id)
+    bucket = client.bucket(bucket_name)
+    blob = bucket.blob(blob_name)
+    blob.upload_from_filename(local_path)
+</div></code></pre>
+<p><strong>Data Cleaning &amp; Transformations:</strong></p>
+<p>Columns, <code>international_plan</code>, <code>voice_mail_plan</code>, and <code>churn</code> are cast from boolean to INT64 for the ML model.</p>
+<p>The function below, <code>get_query_string</code>, does 90% of the transformation work.</p>
+<pre class="hljs"><code><div>def get_query_string(ext_table_id, ext_table):
+
+    # Define the SQL query string
+    return f&quot;&quot;&quot;
+        WITH getTotals AS (
+            SELECT  
+                customer_id,
+                TRUNC(SAFE_CAST(SUM(total_day_minutes + total_eve_minutes + total_intl_minutes + total_night_minutes) AS FLOAT64), 2) AS total_minutes,
+                SAFE_CAST(SUM(total_day_calls + total_eve_calls + total_intl_calls + total_night_calls) AS INT64) AS total_calls,
+                TRUNC(SAFE_CAST(SUM(total_day_charge + total_eve_charge + total_intl_charge + total_night_charge) AS FLOAT64), 2) AS total_charges
+            FROM `{ext_table_id}`
+            GROUP BY customer_id
+        )
+        
+        SELECT
+            TRIM(LOWER(final.customer_id)) AS customer_id,
+            state,
+            SAFE_CAST(account_length AS INT64) AS account_length,
+            CASE WHEN international_plan = FALSE THEN 'No' ELSE 'Yes' END AS international_plan,
+            CASE WHEN voice_mail_plan = FALSE THEN 'No' ELSE 'Yes' END AS voice_mail_plan,
+            gt.total_minutes,
+            gt.total_calls,
+            gt.total_charges,
+            SAFE_CAST(number_customer_service_calls AS INT64) AS number_customer_service_calls,            
+            SAFE_CAST(churn AS INT64) AS churn
+        FROM `{ext_table}` final
+        LEFT JOIN getTotals gt
+        ON final.customer_id = gt.customer_id
+    &quot;&quot;&quot;
+</div></code></pre>
+<p>The <code>getTotals</code> CTE aggregates totals using <code>SAFE_CAST</code> and <code>TRUNC</code> to ensure precision.</p>
+<p>Trailing white spaces in <code>customer_id</code> are removed.</p>
+<p><code>international_plan</code> and <code>voice_mail_plan</code> are transformed to 'Yes' or 'No' for better readability in dashboard slicers.</p>
+<p>The final table, <code>churn_features</code> is created using the SQL string and BigQuery's query function.</p>
+<pre class="hljs"><code><div># Get query string to clean and transform the final table
+    query = get_query_string(external_table_id, external_table)
+
+    client.query(f&quot;CREATE OR REPLACE TABLE `{project_id}.{final_table}` AS {query}&quot;).result()
+</div></code></pre>
+<p>Remaining transformations are handled in scheduled BigQuery queries and can be referenced below.</p>
+<p>Get the churn predictions using Logistic Regression</p>
+<pre class="hljs"><code><div>/*
+  This query will get the customers' predicted churn probability
+  using the Logistic Regression model.
+  
+  Note: Accessed customers' churn probability by indexing
+  the predicted_churn_probs array and getting the property,
+  prob, from the struct
+*/
+CREATE OR REPLACE TABLE `customer_churn_data.customer_churn_probs_lr` AS 
+SELECT
+  customer_id,
+  predicted_churn,
+  predicted_churn_probs[0].prob AS churn_probability,
+  CASE 
+    WHEN predicted_churn_probs[0].prob &lt; .40 THEN &quot;Low-Risk&quot;
+    WHEN predicted_churn_probs[0].prob &gt;= .40 AND predicted_churn_probs[0].prob &lt; .70 THEN &quot;Medium-Risk&quot; ELSE &quot;High-Risk&quot;
+  END AS tier
+FROM ML.PREDICT(
+  MODEL `customer_churn_data.churn_model_logistic`,
+  (
+    SELECT *
+    FROM `customer_churn_data.churn_features`
+  )
+)
+ORDER BY churn_probability DESC;
+</div></code></pre>
+<p>Get the churn predictions using Gradient Boosted Trees</p>
+<pre class="hljs"><code><div>/*
+  This query will get customers' predicted churn probability
+  using the Gradient Boosted Tree model.
+  
+  Note: Accessed customers' churn probability by indexing
+  the predicted_churn_probs array and getting the property,
+  prob, from the struct
+*/
+CREATE OR REPLACE TABLE `customer_churn_data.customer_churn_probs_gbt` AS
+SELECT
+  customer_id,
+  predicted_churn,
+  predicted_churn_probs[0].prob AS churn_probability,
+  CASE 
+    WHEN predicted_churn_probs[0].prob &lt; .40 THEN &quot;Low-Risk&quot;
+    WHEN predicted_churn_probs[0].prob &gt;= .40 AND predicted_churn_probs[0].prob &lt; .70 THEN &quot;Medium-Risk&quot; ELSE &quot;High-Risk&quot;
+  END AS tier
+ FROM ML.PREDICT(
+  MODEL `customer_churn_data.churn_model_boosted`,
+  (
+    SELECT *
+    FROM `customer_churn_data.churn_features`
+  )
+)
+ORDER BY churn_probability DESC;
+</div></code></pre>
+<p><strong>Modeling:</strong></p>
+<ul>
+<li>
+<p>Logistic Regression was chosen for its simplicity and scalability but only achieved 77.48% accuracy.</p>
+</li>
+<li>
+<p>Gradient Boosted Trees achieved 96.68% accuracy and was chosen as the final model.</p>
+</li>
+</ul>
+<p>The performance results are below.</p>
+<p><img src="photos/lr_model_results.png" style="width:45%; height:auto;"> <img src="photos/gbt_model_results.png" style="width:45%; height:auto;"></p>
+<p>Customers are segmented into risk tiers based on churn probability:</p>
+<p><strong>Low-Risk:</strong> 0 - 0.40 (non-inclusive)</p>
+<p><strong>Medium-Risk:</strong> 0.40 - 0.70 (non-inclusive)</p>
+<p><strong>High-Risk:</strong> 0.70 - 1.00 (non-inclusive)</p>
+<img src="photos/gbt_predictions_result_table.png" style="width:300; height:auto;">
+<p>Power BI connects to BigQuery using Direct Query for real-time analysis.</p>
+<h3 id="4-analyze--visualize">4. Analyze &amp; Visualize</h3>
+<p>Explore data distributions, correlations, and trends using visualizations to identify key churn drivers.</p>
+<p>A star-schema data model was used since it was manageable for this dataset and to ensure filters apply correctly across visuals.</p>
+<img src="photos/star-schema-data-model.png" width="575" height="575">
+<p>Insights are organized by sections below.</p>
+<p><strong>Service Usage by Risk Tier</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Risk Tier</strong></th>
+<th><strong>Total Charges</strong></th>
+<th><strong>Total Calls</strong></th>
+<th><strong>Total Minutes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Low-Risk</td>
+<td>$217,470.00</td>
+<td>1,132,727</td>
+<td>2,172,621.66</td>
+</tr>
+<tr>
+<td>High-Risk</td>
+<td>$28,923.83</td>
+<td>128,265</td>
+<td>277,934.72</td>
+</tr>
+<tr>
+<td>Medium-Risk</td>
+<td>$6,261.92</td>
+<td>32,494</td>
+<td>62,101.01</td>
+</tr>
+</tbody>
+</table>
+<img src="photos/service_usage_by_tier.png" style="width:150; height:150;">
+<p><strong>Churn Insights by Plan Type and Risk Tier</strong></p>
+<p><strong>Overall Insights:</strong></p>
+<p>Total customers churned: 598</p>
+<p>Overall churn rate: 14.07%</p>
+<p>Revenue lost from churn: $39.19k</p>
+<p><strong>Churn by Risk Tier:</strong></p>
+<p>Low-Risk: 3,720 customers; 2.74% churn rate</p>
+<p>Medium-Risk: 106 customers; 69.81% churn rate</p>
+<p>High-Risk: 424 customers; 99.53% churn rate</p>
+<p><strong>State Insights:</strong></p>
+<p>New Jersey had the highest churn rate at 27.08%</p>
+<img src="photos/ovr_churn_view.png">
+<p><strong>Segment Insights:</strong></p>
+<ol>
+<li>
+<p>No International or Voicemail Plan</p>
+<ul>
+<li>
+<p>Churned: 383, Churn rate: 13.46%, Revenue loss: $26.11K</p>
+</li>
+<li>
+<p>Churn Rate by Tier: High-Risk - 100%, Medium-Risk - 75%, Low-Risk - 2.26%</p>
+</li>
+<li>
+<p>State Insights: Montana had the highest churn rate at 25.93%</p>
+</li>
+</ul>
+<img src="photos/wo_in_and_vp.png">
+</li>
+<li>
+<p>Only International Plan</p>
+<ul>
+<li>
+<p>Churned: 133, Churn rate: 45.55%, Revenue loss: $8.33K</p>
+</li>
+<li>
+<p>Churn Rate by Tier: High-Risk - 98.33%, Medium-Risk - 73.08%, Low-Risk - 11.04%</p>
+</li>
+<li>
+<p>State Insights: Customers in Iowa (IA), Maine (ME), &amp; New Hampshire (NH) all churned (100%)</p>
+</li>
+</ul>
+<img src="photos/just_ip.png">
+</li>
+<li>
+<p>Only Voicemail Plan</p>
+<ul>
+<li>
+<p>Churned: 48, Churn rate: 4.76%, Revenue loss: $2.67K</p>
+</li>
+<li>
+<p>Churn Rate by Tier: High-Risk - 100%, Medium-Risk - 100%, Low-Risk - 1.94%</p>
+</li>
+<li>
+<p>State Insights: California had the highest churn rate at 25%</p>
+</li>
+</ul>
+<img src="photos/just_vm.png">
+</li>
+<li>
+<p>Both Plans</p>
+<ul>
+<li>
+<p>Churned: 34, Churn rate: 32.69%, Revenue loss: $2.09K</p>
+</li>
+<li>
+<p>Churn Rate by Tier: High-Risk - 92.86%, Medium-Risk - 54.55%, Low-Risk - 13.24%</p>
+</li>
+<li>
+<p>State Insights: Customers in Alabama (AL), Kentucky (KY), Massachusetts (MA), Maine (ME), Minnesota (MN), New Mexico (NM), Nevada (NV), Oregon (OR), Tennessee (TN), &amp; Texas (TX) all churned (100%)</p>
+</li>
+</ul>
+<img src="photos/ip_and_vm.png">
+</li>
+<li>
+<p>No International Plan (regardless of voicemail)</p>
+<ul>
+<li>
+<p>Churned: 431, Churn rate: 11.18%, Revenue loss: $28.77K</p>
+</li>
+<li>
+<p>Churn Rate by Tier: High-Risk churn - 100%, Medium-Risk - 83.33%, Low-Risk: 2.17%</p>
+</li>
+<li>
+<p>State Insights: New Jersey (NJ) and California (CA) had the highest churn rate at 22.99% and 22.22%</p>
+</li>
+</ul>
+<img src="photos/wo_in_and_wow_vp.png">
+</li>
+<li>
+<p>International Plan (with/without voicemail)</p>
+<ul>
+<li>
+<p>Churned: 167, Churn rate: 42.17%, Revenue loss: $10.41K</p>
+</li>
+<li>
+<p>Churn Rate by Tier: High-Risk - 97.30%, Medium-Risk - 69%, Low-Risk -  11.71%</p>
+</li>
+<li>
+<p>State Insights: Maine (ME) and New Hampshire (NH) had the highest churn rate at 100% and 83.33%</p>
+</li>
+</ul>
+<img src="photos/ip_and_wow_vm.png">
+</li>
+<li>
+<p>No Voicemail Plan (with/without international)</p>
+<ul>
+<li>
+<p>Churned: 516, Churn rate: 16.44%, Revenue loss: $34.43K</p>
+</li>
+<li>
+<p>Churn Rate by Tier: High-Risk - 99.74%, Medium-Risk - 73.17%, Low-Risk - 2.77%</p>
+</li>
+<li>
+<p>State Insights: New Jersey (NJ) has the highest churn rate at 27.03%</p>
+</li>
+</ul>
+<img src="photos/wow_in_but_wo_vm.png">
+</li>
+<li>
+<p>Voicemail Plan (with/without international)</p>
+<ul>
+<li>
+<p>Churned: 82, Churn rate: 7.37%, Revenue loss: $4.75K</p>
+</li>
+<li>
+<p>Churn Rate by Tier: High-Risk - 97.56%, Medium-Risk - 58.33%, Low-Risk - 2.67%</p>
+</li>
+<li>
+<p>State Insights: New Jersey (NJ) has the highest churn rate at 27.27%.</p>
+</li>
+</ul>
+<img src="photos/wow_in_but_w_vm.png">
+</li>
+</ol>
+<h3 id="key-takeaways">Key Takeaways</h3>
+<p>High-Risk customers consistently churn at rates near or at 100%, especially those with international plans.</p>
+<p>Voicemail plans are linked to lower churn rates, especially among Low and Medium-Risk groups.</p>
+<p>International plans are a strong churn predictor, with over 42% of customers churning.</p>
+<p>New Jersey frequently appears with the highest churn rate.</p>
+<h3 id="strategic-recommendations">Strategic Recommendations</h3>
+<ol>
+<li>
+<p><strong>Prioritize Retention for Medium and High-Risk Segments</strong></p>
+<p>Focus on targeted outreach: retention offers, proactive support, loyalty rewards.</p>
+</li>
+<li>
+<p><strong>Enhance International Plan Offerings</strong></p>
+<p>Bundle voicemail services or offer discounts for combined plans.</p>
+</li>
+<li>
+<p><strong>Focus on At-Risk States</strong></p>
+<p>Target retention in high-churn states such as New Jersey, Maine, and New Hampshire. Investigate service or perception issues.</p>
+</li>
+<li>
+<p><strong>Drive Engagement in Low-Usage Segments</strong></p>
+<p>Use personalized communication, onboarding support, and usage incentives.</p>
+</li>
+</ol>
+<h3 id="5-deploy--monitor">5. Deploy &amp; Monitor</h3>
+<p>BigQuery's built-in ML models and scheduler are used for automation.</p>
+<p>Training queries run every Monday at 9:00 AM EST.</p>
+<p>Export queries run at 10:00 AM EST.</p>
+<p>Power BI reflects updates post-10:00 AM. Scheduling ends September 1, 2025, due to cloud budget limits.</p>
+
+</body>
+</html>
