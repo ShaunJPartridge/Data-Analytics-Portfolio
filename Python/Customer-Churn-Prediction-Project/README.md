@@ -198,7 +198,7 @@ Power BI connects to BigQuery using Direct Query for real-time analysis.
 
 Explore data distributions, correlations, and trends using visualizations to identify key churn drivers.
 
-A star-schema data model was used since it was manageable for this dataset and to ensure filters apply correctly across visuals. 
+A star-schema data model is used since it's manageable for this dataset and to ensure filters apply correctly across visuals. 
 
 <img src="photos/star-schema-data-model.png" width="575" height="575">
 
