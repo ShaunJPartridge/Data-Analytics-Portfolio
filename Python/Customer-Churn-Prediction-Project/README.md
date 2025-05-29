@@ -190,7 +190,7 @@ Customers are segmented by churn probability into tiers:
 
 **High-Risk:** 0.70 - 1.00 (non-inclusive)
 
-Insert model prediction queries and results screenshots here.
+<img src="photos/gbt_predictions_result_table.png" style="width:300; height:auto;">
 
 Power BI connects to BigQuery using Direct Query for real-time analysis.
 
@@ -198,7 +198,11 @@ Power BI connects to BigQuery using Direct Query for real-time analysis.
 
 Explore data distributions, correlations, and trends using visualizations to identify key churn drivers.
 
-A star-schema data model was used to ensure filters apply correctly across visuals. Insights are organized by sections below.
+A star-schema data model was used since it was manageable for this dataset and to ensure filters apply correctly across visuals. 
+
+<img src="photos/star-schema-data-model.png" width="575" height="575">
+
+Insights are organized by sections below.
 
 **Service Usage by Risk Tier**
 
@@ -208,11 +212,11 @@ A star-schema data model was used to ensure filters apply correctly across visua
 | High-Risk | $28,923.83 | 128,265 | 277,934.72 |
 | Medium-Risk | $6,261.92 | 32,494 | 62,101.01 |
 
-Insert screenshot here.
+<img src="photos/service_usage_by_tier.png" style="width:150; height:150;">
 
 **Churn Insights by Plan Type and Risk Tier**
 
-**Overall Population:**
+**Overall Insights:**
 
 Total customers churned: 598
 
@@ -232,9 +236,89 @@ High-Risk: 424 customers; 99.53% churn rate
 
 New Jersey had the highest churn rate at 27.08%
 
-Insert screenshot here.
+<img src="photos/ovr_churn_view.png">
 
-Continue inserting screenshots and detailed breakdowns for all plan type segments.
+**Segment Insights:**
+
+1. No International or Voicemail Plan
+
+   - Churned: 383, Churn rate: 13.46%, Revenue loss: $26.11K
+
+   - Churn Rate by Tier: High-Risk - 100%, Medium-Risk - 75%, Low-Risk - 2.26%
+  
+   - State Insights: Montana had the highest churn rate at 25.93%
+
+   <img src="photos/wo_in_and_vp.png">
+
+2. Only International Plan
+
+   - Churned: 133, Churn rate: 45.55%, Revenue loss: $8.33K
+
+   - Churn Rate by Tier: High-Risk - 98.33%, Medium-Risk - 73.08%, Low-Risk - 11.04%
+  
+   - State Insights: Customers in Iowa (IA), Maine (ME), & New Hampshire (NH) all churned (100%)
+  
+   <img src="photos/just_ip.png">
+
+3. Only Voicemail Plan
+
+   - Churned: 48, Churn rate: 4.76%, Revenue loss: $2.67K
+
+   - Churn Rate by Tier: High-Risk - 100%, Medium-Risk - 100%, Low-Risk - 1.94%
+  
+   - State Insights: California had the highest churn rate at 25%
+  
+   <img src="photos/just_vm.png">
+
+4. Both Plans
+
+   - Churned: 34, Churn rate: 32.69%, Revenue loss: $2.09K
+
+   - Churn Rate by Tier: High-Risk - 92.86%, Medium-Risk - 54.55%, Low-Risk - 13.24%
+  
+   - State Insights: Customers in Alabama (AL), Kentucky (KY), Massachusetts (MA), Maine (ME), Minnesota (MN), New Mexico (NM), Nevada (NV), Oregon (OR), Tennessee (TN), & Texas (TX) all churned (100%)
+  
+   <img src="photos/ip_and_vm.png">
+
+5. No International Plan (regardless of voicemail)
+
+   - Churned: 431, Churn rate: 11.18%, Revenue loss: $28.77K
+
+   - Churn Rate by Tier: High-Risk churn - 100%, Medium-Risk - 83.33%, Low-Risk: 2.17%
+  
+   - State Insights: New Jersey (NJ) and California (CA) had the highest churn rate at 22.99% and 22.22%
+  
+   <img src="photos/wo_in_and_wow_vp.png">
+
+6. International Plan (with/without voicemail)
+
+   - Churned: 167, Churn rate: 42.17%, Revenue loss: $10.41K
+
+   - Churn Rate by Tier: High-Risk - 97.30%, Medium-Risk - 69%, Low-Risk -  11.71%
+  
+   - State Insights: Maine (ME) and New Hampshire (NH) had the highest churn rate at 100% and 83.33%
+  
+   <img src="photos/ip_and_wow_vm.png">
+
+7. No Voicemail Plan (with/without international)
+
+   - Churned: 516, Churn rate: 16.44%, Revenue loss: $34.43K
+
+   - Churn Rate by Tier: High-Risk - 99.74%, Medium-Risk - 73.17%, Low-Risk - 2.77% 
+  
+   - State Insights: New Jersey (NJ) has the highest churn rate at 27.03%
+  
+   <img src="photos/wow_in_but_wo_vm.png">
+
+8. Voicemail Plan (with/without international)
+
+   - Churned: 82, Churn rate: 7.37%, Revenue loss: $4.75K
+
+   - Churn Rate by Tier: High-Risk - 97.56%, Medium-Risk - 58.33%, Low-Risk - 2.67%
+  
+   - State Insights: New Jersey (NJ) has the highest churn rate at 27.27%.
+  
+   <img src="photos/wow_in_but_w_vm.png">
 
 ### Key Takeaways
 
@@ -258,11 +342,11 @@ New Jersey frequently appears with the highest churn rate.
 
 3. **Focus on At-Risk States**
 
-   Target retention in New Jersey, Maine, New Hampshire. Investigate service or perception issues.
+   Target retention in high-churn states such as New Jersey, Maine, and New Hampshire. Investigate service or perception issues.
 
 4. **Drive Engagement in Low-Usage Segments**
 
-   Use personalized comms, onboarding support, and usage incentives.
+   Use personalized communication, onboarding support, and usage incentives.
 
 ### 5. Deploy & Monitor
 
