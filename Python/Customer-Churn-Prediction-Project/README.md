@@ -182,7 +182,7 @@ The performance results are below.
 <img src="photos/lr_model_results.png" style="width:45%; height:auto;"> <img src="photos/gbt_model_results.png" style="width:45%; height:auto;">
 
 
-Customers are segmented by churn probability into tiers:
+Customers are segmented into risk tiers based on churn probability:
 
 **Low-Risk:** 0 - 0.40 (non-inclusive)
 
