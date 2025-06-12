@@ -25,11 +25,12 @@ The dataset used for this analysis was downloaded from Kaggle and can be found a
 
 **Features**:
 
- - Agent Age (numeric)
- - Agent Rating (decimal)
- - Delivery Time (in minutes)
- - Traffic, Weather, Vehicle (categorical)
- - Area, Order Date, Category
+ - `Order_ID`
+ - `Agent_Age` (numeric)
+ - `Agent_Rating` (decimal)
+ - `Transit_Time` (in minutes)
+ - `Traffic`, `Weather`, `Vehicle` (categorical)
+ - `Area`, `Order_Date`, `Category`
 
 <img src="pics/amazon-data-all-cols.png">
 
@@ -42,31 +43,31 @@ The dataset used for this analysis was downloaded from Kaggle and can be found a
    |![](pics/store-lat-col-dirty.png)|![](pics/store-lat-col-clean.png)|
    |:-:|:-:|
    |Before|After|
-
-   - Dropped rows with blank transit times to preserve metric integrity 
+  
+   - Dropped rows with a blank in the `Transit_Time` column to preserve metric integrity 
 
    ![](pics/power-query-removing-blank-transit-col.png)
 
    - Standardized data types (e.g., converted agent age from string to integer)
    
-   - Capitalized first letter of vehicle types for better visuals
+   - Capitalized first letter of `Vehicle` types for better visuals
 
 
 ## Feature Engineering:
 
-   - Created Month, Weekday, Weekday Name using Power Query date functions
+   - Created `Month`, `Weekday`, `Weekday_Name` columns using Power Query date functions
 
    |![](pics/power-query-month-col.png)|![](pics/power-query-weekday-col.png)|![](pics/power-query-day-name-col.png)|
    |:-:|:-:|:-:|
 
-   - Built Time_of_Day column using DAX SWITCH() for Morning/Afternoon/Evening/Night
+   - Built `Time_of_Day` column using DAX SWITCH() for Morning/Afternoon/Evening/Night
 
-   - Created Amount_Of_Orders measure to track volume
+   - Created `Amount_Of_Orders` measure to track volume
 
    |![](pics/DAX-time-of-day.png)|![](pics/DAX-count-of-orders.png)|
    |:-:|:-:|
 
-   - Ensured weekday sorting using numerical weekday values
+   - Ensured bar chart would be sorted by `Weekday_Name` using numerical `Weekday` values
 
    <img src="pics/sort-by-week-day-name.png" style="width:400px; height:400px;">
 
@@ -74,35 +75,42 @@ The dataset used for this analysis was downloaded from Kaggle and can be found a
 
 ## Descriptive & Exploratory Analysis:
 
-   - Majority of deliveries made to Metropolitan areas (30K+ orders)
+   - Majority of deliveries were made to Metropolitan areas (30K+ orders)
 
    - Motorcycles were the most used delivery vehicle across all areas
 
-   <img src="pics/cats-del-in-area-per-vehicle.png" style="width:400px; height:400px;">
+   - Evenings had the highest order activity, especially on Wednesdays and Sundays
 
-   - Evening had the highest order activity, especially Wednesdays and Sundays
+   - Electronics, books, and jewelry were the top products purchased
 
-   - Electronics, books, and jewelry were top products
+   |![](pics/cats-del-in-area-per-vehicle.png)|![](pics/cats-db.png)|
+   |:-:|:-:|
 
 ## Time-Series Trends:
 
-    Significant order increases from Feb 18 – Mar 1 (likely due to end-of-month promotions)
+   - Significant order increases from Feb 18 – Mar 1 (likely due to end-of-month promotions)
 
-    March had the most complete data; February and April had partial coverage
+   - March had the most complete data; February and April had partial coverage
 
-    Delivery times varied significantly based on traffic and area:
+<img src="pics/home-db-all.png" style="width:500px; height:500px;">
 
-        Fastest transit times: low-traffic urban zones
+   - Delivery times varied significantly based on traffic and area:  
+
+        Fastest: low-traffic urban areas  
 
         Slowest: semi-urban in high traffic
+     
+|![](pics/home-db-urban-low-fastest-avg-time.png)|![](pics/home-db-semi-urban-high-lowest-avg-time.png)|
+|:-:|:-:|
 
 ## Traffic Pattern Insights:
 
-    Jammed traffic = longest average transit times (148 mins), lowest ratings
+   - Jammed traffic = longest average transit times (148 mins), lowest ratings
 
-    Low traffic = quickest deliveries (101 mins), highest ratings
+   - Low traffic = quickest deliveries (101 mins), highest ratings
 
-    Semi-urban = fewest orders, longest transit times, lowest agent ratings
+|![](pics/home-db-traffic-jam-all-areas.png)|![](pics/home-db-low-traffic-all-areas.png)|
+|:-:|:-:|
 
 # 5. Share & Visualize Results
 
