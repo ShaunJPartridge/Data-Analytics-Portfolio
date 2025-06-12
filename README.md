@@ -1,5 +1,5 @@
 # Data-Analytics-Portfolio
-This repo consists of my projects done with the following technologies: SQL, Google Sheets, R, Python, Tableau, and Power BI.
+This repo consists of data analytics projects, ranging from analyzing NFL team stats and bike-sharing data to uncovering insights about supply chain/logistics systems and customer behavior patterns, using the following technologies: SQL, Google Sheets, R, Python, Tableau, and Power BI.
 
 ## SQL
 [Warehouse Performance Analysis]()  
