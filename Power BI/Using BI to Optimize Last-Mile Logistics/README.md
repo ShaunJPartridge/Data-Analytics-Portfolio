@@ -74,17 +74,15 @@ The dataset used for this analysis was downloaded from Kaggle and can be found a
 
 ## Descriptive & Exploratory Analysis:
 
-    Majority of deliveries made to Metropolitan areas (30K+ orders)
+   - Majority of deliveries made to Metropolitan areas (30K+ orders)
 
-    Motorcycles were the most used delivery vehicle across all areas
+   - Motorcycles were the most used delivery vehicle across all areas
 
-    Evening had the highest order activity, especially Wednesdays and Sundays
+   <img src="pics/cats-del-in-area-per-vehicle.png" style="width:400px; height:400px;">
 
-    Electronics, books, and jewelry were top products
+   - Evening had the highest order activity, especially Wednesdays and Sundays
 
-    Foggy weather saw more deliveries than sunny conditions
-
-    All transit times were under 24 hours, ranging from 10–270 minutes
+   - Electronics, books, and jewelry were top products
 
 ## Time-Series Trends:
 
@@ -115,8 +113,6 @@ The dataset used for this analysis was downloaded from Kaggle and can be found a
     KPIs for agent ratings, transit times, order volumes
 
     Charts for order frequency by weekday, time of day, and product category
-
-    Heatmaps for traffic impact on performance
 
     Scaled Y-axis for Avg Transit Time Throughout the Week for consistent interpretation
 
