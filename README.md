@@ -19,5 +19,5 @@ This repo consists of data analytics projects, ranging from analyzing NFL team s
 ## Power BI
 [Warehouse Performance Analysis]()  
 [Customer Churn Analysis](https://github.com/ShaunJPartridge/Data-Analytics-Portfolio/tree/main/Python/Customer-Churn-Prediction-Project)  
-[Using BI to Optimize Last-Mile Logistics]()  
+[Using BI to Optimize Last-Mile Logistics](https://github.com/ShaunJPartridge/Data-Analytics-Portfolio/tree/main/Power%20BI/Using%20BI%20to%20Optimize%20Last-Mile%20Logistics)  
 [Adventure Works](https://github.com/ShaunJPartridge/Data-Analytics-Portfolio/tree/main/Power%20BI/AdventureWorks)

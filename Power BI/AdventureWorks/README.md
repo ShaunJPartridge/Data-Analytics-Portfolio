@@ -5,7 +5,7 @@ This data analysis involved tracking KPI's, compare regional performance, analyz
 # Technologies Used
  - [Microsoft Power BI](https://www.microsoft.com/en-us/power-platform/products/power-bi)
 
-# Ask
+# Ask the Right Questions (Define the Problem)
 The first step was identifying stakeholders' problem(s) or question(s) that needed to be answered with this analysis. The questions were:
 
  - How is the company performing monthly and overall?
@@ -19,10 +19,10 @@ The first step was identifying stakeholders' problem(s) or question(s) that need
  - What income levels and occupations made the most purchases?
 
 
-# Prepare
+# Prepare the Data
 The second step was organizing and structuring the data from multiple files using data models. Three were made to create relationships between the fact and dimensional tables, allowing for efficient analysis and insighful visualizations by establishing clear connections between different data points. The metrics that will be used throughout this analysis and help answer the questions above are: revenue, profit, total orders, and return rate. To help visualize these metrics, KPI's and charts will be used to track the company's performance and cards and tables will display category visualizations.
 
-# Process 
+# Clean & Prepare the Data
 The third step involved cleaning and manipulating the data using M code in the Power Query Editor and DAX in table view. In the Power Query Editor, the first step was to create column headers by promoting the first row of data in each table. After making column headers, some of the columns were either deleted or have data types manipulated so that the data could be more intuitive as well as easier to use for calculations. The following steps were created to make new calculated columns using M code's Date/Time functions:
  - Day Name
  - Start of Week, Month, and Quarter
@@ -35,7 +35,7 @@ In table view, columns were formatted intuitvely to the data they contained, suc
  - Customer Priority
  - Education Category
 
-# Analyze
+# Analyze the Data
 After cleaning the data, several DAX measures were created in report view to help build the dashboards. The following are some of the key measures used:
 
  - Total Revenue, Total Orders, Return Rate, Total Profit
@@ -51,7 +51,7 @@ The Total Orders and Revenue (Customer Detail) columns are blank because they ar
 
 ![Screenshot 2025-02-15 191506](https://github.com/user-attachments/assets/4dc79311-741f-45b8-9b00-f549ff111b71)
 
-# Share
+# Share & Visualize Results
 After creating the measures, three filtered dashboards were used to visualize them and show stakeholders KPI's and key metrics. The first was a top-level dashboard used for executive stakeholders such as the CEO, COO, and VP, to show the company's overall performance. Total profit, returns, revenue, orders, and orders by category were illustrated in the dashboard below using cards and a bar graph.
 
 ![AW-EXEC-DB](https://github.com/user-attachments/assets/bcea88ba-a7c7-4bd2-8d4d-200d332dffa1)
@@ -102,5 +102,5 @@ Another interesting observation was that as the amount of customers increased ov
 </table>
 
 
-# Act
+# Act (Draw Conclusions & Recommend Actions)
 There are a couple calls to action now for upper management to drive sales and increase revenue. One is to expand their customer base in more countries. This can be done with advertising to a wider audience and opening more locations in other countries. Two, is adjusting to the customers and market to drive more revenue per customer. This can be acheived by identifying different customer segments and tailoring marketing and pricing strategies to their needs.
