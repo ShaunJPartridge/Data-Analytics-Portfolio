@@ -15,6 +15,7 @@ This project explores a large dataset of Amazon deliveries to uncover insights t
 
 # 2. Collect the Data
 
+
 ## Dataset Source:
 
 The dataset used for this analysis was downloaded from Kaggle and can be found at [Amazon Delivery Dataset](https://www.kaggle.com/datasets/sujalsuthar/amazon-delivery-dataset)
@@ -34,11 +35,12 @@ The dataset used for this analysis was downloaded from Kaggle and can be found a
 
 <img src="pics/amazon-data-all-cols.png">
 
+
 # 3. Clean & Prepare the Data
 
 ## Data Cleaning Tasks:
 
-   - Removed invalid geolocation values (e.g., stores lat/lon = 0 - in the Indian Ocean)
+   - Removed invalid geolocation values (`Store_Latitude`/`Store_Longitude` = 0 - in the Indian Ocean)
 
    |![](pics/store-lat-col-dirty.png)|![](pics/store-lat-col-clean.png)|
    |:-:|:-:|
@@ -51,7 +53,6 @@ The dataset used for this analysis was downloaded from Kaggle and can be found a
    - Standardized data types (e.g., converted agent age from string to integer)
    
    - Capitalized first letter of `Vehicle` types for better visuals
-
 
 ## Feature Engineering:
 
@@ -70,10 +71,29 @@ The dataset used for this analysis was downloaded from Kaggle and can be found a
    - Ensured bar chart would be sorted by `Weekday_Name` using numerical `Weekday` values
 
    <img src="pics/sort-by-week-day-name.png" style="width:400px; height:400px;">
+   
 
 # 4. Analyze the Data
 
-## Descriptive & Exploratory Analysis:
+## a. Time-Series Trends:
+
+   - Significant order increases from Feb 18 – Mar 1 (likely due to end-of-month promotions)
+
+   - March had the most complete data; February and April had partial coverage
+
+   - Delivery times varied significantly based on traffic and area:  
+
+     * Fastest: low-traffic urban areas  
+
+     * Slowest: semi-urban in high traffic
+
+## b. Traffic Pattern Insights:
+
+   - Traffic Jams = longest average transit times (148 mins), lowest ratings
+
+   - Low traffic = quickest deliveries (101 mins), highest ratings
+
+## c. Descriptive & Exploratory Analysis:
 
    - Majority of deliveries were made to Metropolitan areas (30K+ orders)
 
@@ -83,59 +103,49 @@ The dataset used for this analysis was downloaded from Kaggle and can be found a
 
    - Electronics, books, and jewelry were the top products purchased
 
-   |![](pics/cats-del-in-area-per-vehicle.png)|![](pics/cats-db.png)|
-   |:-:|:-:|
-
-## Time-Series Trends:
-
-   - Significant order increases from Feb 18 – Mar 1 (likely due to end-of-month promotions)
-
-   - March had the most complete data; February and April had partial coverage
-
-<img src="pics/home-db-all.png" style="width:500px; height:500px;">
-
-   - Delivery times varied significantly based on traffic and area:  
-
-        Fastest: low-traffic urban areas  
-
-        Slowest: semi-urban in high traffic
-     
-|![](pics/home-db-urban-low-fastest-avg-time.png)|![](pics/home-db-semi-urban-high-lowest-avg-time.png)|
-|:-:|:-:|
-
-## Traffic Pattern Insights:
-
-   - Jammed traffic = longest average transit times (148 mins), lowest ratings
-
-   - Low traffic = quickest deliveries (101 mins), highest ratings
-
-|![](pics/home-db-traffic-jam-all-areas.png)|![](pics/home-db-low-traffic-all-areas.png)|
-|:-:|:-:|
 
 # 5. Share & Visualize Results
 
-## Dashboard Features:
+## 4.a Time-Series Trends Visuals:
 
-    Multi-filtered views (by area, traffic, time of day, etc.)
+   |![](pics/home-db-all.png)|![](pics/home-db-urban-low-fastest-avg-time.png)|
+   |:-:|:-:|
+   |![](pics/home-db-semi-urban-high-lowest-avg-time.png)|![](pics/home-db-all-traffic-other-area.png)|
+   
+## 4.b Traffic Pattern Insights Visuals:
 
-    KPIs for agent ratings, transit times, order volumes
+   |![](pics/home-db-traffic-jam-all-areas.png)|![](pics/home-db-low-traffic-all-areas.png)|
+   |:-:|:-:|
 
-    Charts for order frequency by weekday, time of day, and product category
+## 4.c Descriptive & Exploratory Analysis Visuals:
 
-    Scaled Y-axis for Avg Transit Time Throughout the Week for consistent interpretation
+   |![](pics/cats-db.png)|![](pics/cats-db-feb.png)|
+   |:-:|:-:|
+   |![](pics/cats-db-march.png)|![](pics/cats-db-april.png)|
+
 
 # 6. Act (Draw Conclusions & Recommend Actions)
 
 ## Key Takeaways:
 
-    Optimize routing based on area, traffic, and time of day
+   - Transit time influences agent ratings — the quicker the delivery, the better the customer feedback
 
-    Promote motorcycle usage for congested zones
+   - Agents riding motorcycles in low traffic, urban areas are the fastest and get the highest ratings
 
-    Use delivery trends to better forecast demand and staffing needs
+   - Delivery optimization should prioritize time of day, vehicle type, and regional traffic trends
 
-    Evening hours (esp. Wednesdays/Thursdays) offer high delivery efficiency
+   - High traffic times correlate with Afternoon deliveries that consist mostly of skincare, sports, and pet supplies products
 
-    Monitor agent ratings as a proxy for customer satisfaction and delivery time
+   - Evening orders dominate—especially on Wednesdays and Sundays
 
-    Improve semi-urban logistics by possibly expanding warehouse coverage
+## Recommendations:
+
+   - Route deliveries to Urban/Other zones during low-traffic times
+
+   - Assign motorcycle deliveries for congested routes
+
+   - Focus on high-efficiency time slots (Evenings, Weds/Thurs) to deliver packages
+
+   - Use agent performance data for training purposes
+
+   - Develop demand-based staffing forecasts by day & hour
