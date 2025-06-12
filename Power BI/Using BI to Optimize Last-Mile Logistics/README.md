@@ -31,17 +31,19 @@ The dataset used for this analysis was downloaded from Kaggle and can be found a
  - Traffic, Weather, Vehicle (categorical)
  - Area, Order Date, Category
 
+<img src="pics/amazon-data-all-cols.png">
+
 # 3. Clean & Prepare the Data
 
 ## Data Cleaning Tasks:
 
-   Removed invalid geolocation values (e.g., stores lat/lon = 0 - in the Indian Ocean)
+   - Removed invalid geolocation values (e.g., stores lat/lon = 0 - in the Indian Ocean)
 
-   Dropped rows with blank delivery times
+   - Dropped rows with blank transit times to preserve metric integrity
 
-   Converted text fields like Agent Age to numeric
-
-   Standardized text formatting for cleaner visuals (e.g., capitalizing vehicle types)  
+   - Standardized data types (e.g., converted agent age from string to integer)
+   
+   - Capitalized first letter of vehicle types for better visuals
 
    |![](pics/store-lat-col-dirty.png)|![](pics/store-lat-col-clean.png)|
    |:-:|:-:|
