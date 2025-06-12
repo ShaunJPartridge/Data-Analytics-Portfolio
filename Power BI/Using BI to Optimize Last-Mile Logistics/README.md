@@ -21,9 +21,9 @@ The dataset used for this analysis was downloaded from Kaggle and can be found a
 
 ## Key Features:
 
-43,648 rows x 16 columns
+**Size**: 43,648 rows x 16 columns
 
-Covers metrics like:
+**Features**:
 
  - Agent Age (numeric)
  - Agent Rating (decimal)
@@ -35,13 +35,17 @@ Covers metrics like:
 
 ## Data Cleaning Tasks:
 
-   Removed invalid geolocation values (e.g., stores in the ocean 🌊)
+   Removed invalid geolocation values (e.g., stores lat/lon = 0 - in the Indian Ocean)
 
    Dropped rows with blank delivery times
 
    Converted text fields like Agent Age to numeric
 
-   Standardized text formatting for cleaner visuals (e.g., capitalizing vehicle types)
+   Standardized text formatting for cleaner visuals (e.g., capitalizing vehicle types)  
+
+   |![](pics/store-lat-col-dirty.png)|![](pics/store-lat-col-clean.png)|
+   |:-:|:-:|
+   |Before|After|
 
 ## Feature Engineering:
 
