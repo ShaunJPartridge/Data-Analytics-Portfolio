@@ -39,25 +39,34 @@ The dataset used for this analysis was downloaded from Kaggle and can be found a
 
    - Removed invalid geolocation values (e.g., stores lat/lon = 0 - in the Indian Ocean)
 
-   - Dropped rows with blank transit times to preserve metric integrity
+   |![](pics/store-lat-col-dirty.png)|![](pics/store-lat-col-clean.png)|
+   |:-:|:-:|
+   |Before|After|
+
+   - Dropped rows with blank transit times to preserve metric integrity 
+
+   ![](pics/power-query-removing-blank-transit-col.png)
 
    - Standardized data types (e.g., converted agent age from string to integer)
    
    - Capitalized first letter of vehicle types for better visuals
 
-   |![](pics/store-lat-col-dirty.png)|![](pics/store-lat-col-clean.png)|
-   |:-:|:-:|
-   |Before|After|
 
 ## Feature Engineering:
 
-    Created Month, Weekday, Weekday Name using Power Query date functions
+   - Created Month, Weekday, Weekday Name using Power Query date functions
 
-    Built Time_of_Day column using DAX SWITCH() for Morning/Afternoon/Evening/Night
+   |![](pics/power-query-month-col.png)|![](pics/power-query-weekday-col.png)|![](pics/power-query-day-name-col.png)|
+   |:-:|:-:|:-:|
 
-    Created Amount_Of_Orders measure to track volume
+   - Built Time_of_Day column using DAX SWITCH() for Morning/Afternoon/Evening/Night
 
-    Ensured weekday sorting using numerical weekday values
+   - Created Amount_Of_Orders measure to track volume
+
+   |![](pics/DAX-time-of-day.png)|![](pics/DAX-count-of-orders.png)|
+   |:-:|:-:|
+
+   - Ensured weekday sorting using numerical weekday values
 
 # 4. Analyze the Data
 
