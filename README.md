@@ -3,8 +3,7 @@ This repo consists of data analytics projects, ranging from analyzing NFL team s
 
 ## SQL
 [Warehouse Performance Analysis]()  
-[Customer Churn Analysis](https://github.com/ShaunJPartridge/Data-Analytics-Portfolio/tree/main/Python/Customer-Churn-Prediction-Project)  
-[Boosting Delivery Efficiency]()  
+[Customer Churn Analysis](https://github.com/ShaunJPartridge/Data-Analytics-Portfolio/tree/main/Python/Customer-Churn-Prediction-Project)   
 [2018 to 2022 NFL Team Trends](https://github.com/ShaunJPartridge/Data-Analytics-Portfolio/tree/main/SQL/NFL-2018-to-2022-team-trends)
 
 ## Google Sheets
