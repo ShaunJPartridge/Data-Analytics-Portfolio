@@ -18,4 +18,4 @@ This repo consists of my projects done with the following technologies: SQL, Goo
 
 ## Power BI
 [Warehouse Performance Analysis - Part 2]()  
-[Adventure Works]()
+[Adventure Works](https://github.com/ShaunJPartridge/Data-Analytics-Portfolio/tree/main/Power%20BI/AdventureWorks)
