@@ -200,7 +200,7 @@ Explore data distributions, correlations, and trends using visualizations to ide
 
 A star-schema data model is used since it's manageable for this dataset and to ensure filters apply correctly across visuals. 
 
-<img src="photos/star-schema-data-model.png" width="575" height="575">
+<img src="photos/star-schema-data-model.png" width="555" height="555">
 
 Insights are organized by sections below.
 
