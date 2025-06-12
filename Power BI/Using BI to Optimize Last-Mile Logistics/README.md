@@ -68,6 +68,8 @@ The dataset used for this analysis was downloaded from Kaggle and can be found a
 
    - Ensured weekday sorting using numerical weekday values
 
+   <img src="pics/sort-by-week-day-name.png" style="width:400px; height:400px;">
+
 # 4. Analyze the Data
 
 ## Descriptive & Exploratory Analysis:
@@ -86,7 +88,7 @@ The dataset used for this analysis was downloaded from Kaggle and can be found a
 
 ## Time-Series Trends:
 
-    Significant order increases from Feb 18 – Mar 1 (likely due to President’s Day or end-of-month promotions)
+    Significant order increases from Feb 18 – Mar 1 (likely due to end-of-month promotions)
 
     March had the most complete data; February and April had partial coverage
 
