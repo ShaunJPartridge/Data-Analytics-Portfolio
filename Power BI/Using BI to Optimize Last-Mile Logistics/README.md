@@ -1,55 +1,47 @@
-# 1. Ask the Right Questions (Define the Problem)
+# Using BI to Optimize Last-Mile Logistics
 
-## Objective:
-To uncover insights that influence delivery efficiency and identify opportunities for operational improvement.
+# Objective:
+This project explores a large dataset of Amazon deliveries to uncover insights that can improve delivery efficiency and optimize operations. The analysis focuses on customer behavior, delivery performance, product trends, and traffic impacts—both overall and by area.
+
+# 1. Ask the Right Questions (Define the Problem)
 
 ## Guiding Questions:
 
-    What factors affect delivery efficiency?
-
-    Which product categories are most and least popular?
-
-    How do traffic, delivery area, and vehicle type impact transit time?
-
-    When are orders most frequently placed?
-
-    What patterns exist in agent performance across different conditions?
+   - What factors affect delivery efficiency?  
+   - Which product categories are most and least popular?  
+   - How do traffic, delivery area, and vehicle type impact transit time?  
+   - When are orders most frequently placed?  
+   - What patterns exist in agent performance across different conditions?  
 
 # 2. Collect the Data
 
 ## Dataset Source:
 
-    Kaggle’s Amazon Delivery Dataset
+The dataset used for this analysis was downloaded from Kaggle and can be found at [Amazon Delivery Dataset](https://www.kaggle.com/datasets/sujalsuthar/amazon-delivery-dataset)
 
 ## Key Features:
 
-    40,000+ rows
+43,648 rows x 16 columns
 
-    16 columns
+Covers metrics like:
 
-    Covers metrics like:
-
-        Agent Age (numeric)
-
-        Agent Rating (decimal)
-
-        Delivery Time (in minutes)
-
-        Traffic, Weather, Vehicle (categorical)
-
-        Area, Order Date, Category
+ - Agent Age (numeric)
+ - Agent Rating (decimal)
+ - Delivery Time (in minutes)
+ - Traffic, Weather, Vehicle (categorical)
+ - Area, Order Date, Category
 
 # 3. Clean & Prepare the Data
 
 ## Data Cleaning Tasks:
 
-    Removed invalid geolocation values (e.g., stores in the ocean 🌊)
+   Removed invalid geolocation values (e.g., stores in the ocean 🌊)
 
-    Dropped rows with blank delivery times
+   Dropped rows with blank delivery times
 
-    Converted text fields like Agent Age to numeric
+   Converted text fields like Agent Age to numeric
 
-    Standardized text formatting for cleaner visuals (e.g., capitalizing vehicle types)
+   Standardized text formatting for cleaner visuals (e.g., capitalizing vehicle types)
 
 ## Feature Engineering:
 
