@@ -15,6 +15,8 @@ The data for this analysis was already in BigQuery and it is also where the 1st 
 |Orders - 10,000 x 5|Warehouse - 10 x 5|
 
 ### 3. Clean & Prepare the Data
+The table, `Orders`, appeared clean at first glance but when I sorted it by the `order_date` column, there was an outlier with a date of 2023-09-01. To handle this one row, I simply excluded it using the `WHERE` clause in all of the queries.
+
 
 ### 4. Analyze the Data
 
