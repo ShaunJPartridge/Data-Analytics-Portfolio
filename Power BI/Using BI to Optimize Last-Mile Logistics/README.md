@@ -3,7 +3,7 @@
 ## Data Analysis Process
 
 ### 1. Define the Problem
-Amazon has noticed that customers are experiencing a delay in receiving their packages and wants to know what's causing the dip in service. To get to the bottom of this, I'm going to analyze over 30,000 of their delivery records to uncover insights that can improve delivery efficiency and optimize operations. The analysis focuses on customer behavior, delivery performance, product trends, and traffic impacts—both overall and by area.
+Amazon has noticed a decline in delivery performance, with customers experiencing delays in receiving their packages. To investigate the root causes, I analyzed over 30,000 delivery records to uncover insights that can help improve efficiency and optimize operations. This analysis explores customer behavior, delivery performance, product trends, and traffic impacts—both overall and across different service areas.
 
 **Guiding Questions**:
 
