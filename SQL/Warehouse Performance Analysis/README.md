@@ -33,7 +33,7 @@ What are the total orders and customers?
 <img src="pics/total-customers-and-orders.png" width=400px /><br>  
 
 What's the amount of shipments per warehouse
-<img src="pics/total-shipments-per-warehouse" width=400px /><br>  
+<img src="pics/total-shipments-per-warehouse.png" width=400px /><br>  
 
 What's the capacity being wasted at the warehouses with no shipments?
 <img src="pics/capacity-wasted.png" width=400px /><br>  
