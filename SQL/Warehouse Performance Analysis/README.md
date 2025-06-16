@@ -16,10 +16,10 @@ The data for this analysis was already in BigQuery and it is also where the 1st 
 
 ### 3. Clean & Prepare the Data
 The table, `Orders`, appeared clean at first glance but when I sorted it by the `order_date` column, there was an outlier with a date of 2023-09-01. To handle this one row, I simply excluded it using the `WHERE` clause in all of the queries. In Power BI, I filtered the row out of the data set using the Power Query Editor.
-|![](pics/orders-table-details.png) | ![](pics/orders-desc-query.png)|
-|:-:|:-:|
-|![](pics/order_dates.png) | ![](pics/cleaning-orders-table-power-query.png)|
-|:-:|:-:|
+
+<img src="pics/orders-table-details.png" width=400px /> <img src="pics/orders-desc-query.png" width=400px />
+<br>
+<img src="pics/order_dates.png" width=400px /> <img src="pics/cleaning-orders-table-power-query.png" width=400px />
 
 
 ### 4. Analyze the Data
