@@ -29,16 +29,16 @@ In Power BI, I filtered the row out of the data set using the Power Query Editor
 <img src="pics/cleaning-orders-table-power-query.png" width=250px /><br>  
 
 ### 4. Analyze the Data
-What are the total orders and customers?
+What are the total orders and customers?  
 <img src="pics/total-customers-and-orders.png" width=400px /><br>  
 
-What's the amount of shipments per warehouse
+What's the amount of shipments per warehouse  
 <img src="pics/total-shipments-per-warehouse" width=400px /><br>  
 
-What's the capacity being wasted at the warehouses with no shipments?
+What's the capacity being wasted at the warehouses with no shipments?  
 <img src="pics/capacity-wasted.png" width=400px /><br>  
 
-How many orders are these warehouses getting each month?
+How many orders are these warehouses getting each month?  
 <img src="pics/warehouse-orders-per-month.png" width=400px /><br>  
 
 How fast are these orders being processed?
