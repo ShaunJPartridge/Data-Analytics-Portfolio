@@ -3,7 +3,7 @@
 ## Data Analysis Process
 
 ### 1. Define the Problem
-This project explores a large dataset of Amazon deliveries to uncover insights that can improve delivery efficiency and optimize operations. The analysis focuses on customer behavior, delivery performance, product trends, and traffic impacts—both overall and by area.
+Amazon has noticed that customers are experiencing a delay in receiving their packages and wants to know what's causing the dip in service. To get to the bottom of this, I'm going to analyze over 30,000 of their recent orders to uncover insights that can improve delivery efficiency and optimize operations. The analysis focuses on customer behavior, delivery performance, product trends, and traffic impacts—both overall and by area.
 
 **Guiding Questions**:
 
