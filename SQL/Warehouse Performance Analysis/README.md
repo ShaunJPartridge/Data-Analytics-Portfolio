@@ -31,9 +31,7 @@ In Power BI, I filtered the row out of the data set using the Power Query Editor
 ### 4. Analyze the Data
 What are the total orders and customers?  
 <img src="pics/total-customers-and-orders.png" width=400px /><br>  
-
-What's the amount of shipments per warehouse
-<img src="pics/total-shipments-per-warehouse.png" width=400px /><br>  
+ 
 What's the amount of shipments per warehouse  
 <img src="pics/total-shipments-per-warehouse.png" width=400px /><br>  
 
