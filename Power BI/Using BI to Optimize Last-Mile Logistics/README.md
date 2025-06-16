@@ -126,7 +126,7 @@ The dataset used for this analysis was downloaded from Kaggle and can be found a
 
 ### 6. Act (Draw Conclusions & Recommend Actions)
 
-**Key Takeaways**:
+### Key Takeaways:
 
    - Transit time influences agent ratings — the quicker the delivery, the better the customer feedback
 
@@ -138,7 +138,7 @@ The dataset used for this analysis was downloaded from Kaggle and can be found a
 
    - Evening orders dominate—especially on Wednesdays and Sundays
 
-**Strategic Recommendations**:
+### Strategic Recommendations:
 
    - Route deliveries to Urban/Other zones during low-traffic times
 
