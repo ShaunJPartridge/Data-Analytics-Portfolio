@@ -24,8 +24,29 @@ To handle this one row, I simply excluded it using the `WHERE` clause in all of 
 In Power BI, I filtered the row out of the data set using the Power Query Editor.
 <img src="pics/cleaning-orders-table-power-query.png" width=400px /><br>
 
-
 ### 4. Analyze the Data
+What are the total orders and customers?
+<img src="pics/total-customers-and-orders.png" width=400px /><br>  
+
+What's the amount of shipments per warehouse
+<img src="pics/total-shipments-per-warehouse" width=400px /><br>  
+
+What's the capacity being wasted at the warehouses with no shipments?
+<img src="pics/capacity-wasted.png" width=400px /><br>  
+
+How many orders are these warehouses getting each month?
+<img src="pics/warehouse-orders-per-month.png" width=400px /><br>  
+
+How fast are these orders being processed?
+|![](pics/warehouse-turnaround-1.png)|![](pics/warehouse-turnaround-2.png)|
+|---|---|  
+
+Rank warehouses based off of the average number of orders per week & month
+|![](pics/weekly-orders-ranked.png)|![](pics/monthly-orders-ranked.png)|
+|---|---|  
+
+
+
 
 ### 5. Share & Visualize Results
 
