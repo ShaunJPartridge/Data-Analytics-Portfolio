@@ -42,6 +42,8 @@ What's the capacity being wasted at the warehouses with no shipments?
 
 How many orders are these warehouses getting each month?  
 <img src="pics/warehouse-orders-per-month.png" width=400px /><br>  
+|![](pics/month-warehouse-orders-1.png)| ![](pics/month-warehouse-orders-2.png)|
+|---|---|  
 
 How fast are these orders being processed?
 |![](pics/warehouse-turnaround-1.png)|![](pics/warehouse-turnaround-2.png)|
