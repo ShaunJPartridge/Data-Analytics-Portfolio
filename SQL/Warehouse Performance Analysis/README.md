@@ -11,8 +11,10 @@ The data for this analysis was already in BigQuery and it is also where the 1st 
 **Table Dimensions**:
 
 |![](pics/orders-table.png)|![](pics/warehouse-table.png)|
-|:-:|:-:|
+|---|---|
 |Orders - 10,000 x 5|Warehouse - 10 x 5|
+
+There will also be 7 additional tables from queries below that will be used in Power BI to visualize the results.
 
 ### 3. Clean & Prepare the Data
 The table, `Orders`, appeared clean at first glance but when I sorted it by the `order_date` column, I spotted an outlier with a date of 2023-09-01.   
@@ -25,8 +27,15 @@ So, to check if this was a valid record or not, I checked to see when was the ta
 To handle this one row, I simply excluded it using the `WHERE` clause in all of the queries.  
 <img src="pics/total-customers-and-orders.png" width=400px /><br>  
 
-In Power BI, I filtered the row out of the data set using the Power Query Editor.  
+In Power BI:  
+I filtered the row out of the data set using the Power Query Editor.  
 <img src="pics/cleaning-orders-table-power-query.png" width=250px /><br>  
+
+I also had to remove the comma from the `number of orders` column in the `warehouse-total-orders` table to transform the value from string to number.
+|![](pics/warehouse-total-orders-table-before.png)|![](pics/replace-values-wh-total-orders-number-of-orders-col.png)|
+|---|---|  
+|![](pics/warehouse-total-orders-table-after.png)|![](pics/warehouse-total-orders-table-final.png)|
+
 
 ### 4. Analyze the Data
 What are the total orders and customers?  
@@ -51,6 +60,9 @@ Rank warehouses based off of the average number of orders per week & month
 |![](pics/weekly-orders-ranked.png)|![](pics/monthly-orders-ranked.png)|
 |---|---|  
 
+Get a 5-day forecast for orders (Monday-Friday); edited the query so that the first week did not have NULL values
+|![](pics/5-day-forecasted-orders-w-nulls.png)|![](pics/5-day-forecasted-orders-final.png)|
+|---|---|
 
 
 
