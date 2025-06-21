@@ -74,10 +74,12 @@ Get a 5-day forecast for orders (Monday-Friday); edited the query so that the fi
 
 Compare actual amount of orders to 5-day forecasted amount of orders  
 
-<img src="pics/warehouse-weekly-actual-forecasted-orders.png" width=400px /><br>  
+<img src="pics/actual-vs-forecasted-orders.png" width=400px /><br>  
 
 Which warehouses have orders that either meet or are close to the amount of forecasted orders (have the smallest mean absolute error)?
-Note, there is the MAE before and after I filtered out the order with a date of 2023-09-01
+Note, there is the MAE before and after I filtered out the order with a date of 2023-09-01  
+
+<img src="pics/warehouse-mean-absolute-errors.png" width=400px /><br>  
 |![](pics/warehouse-mae-old.png)|![](pics/warehouse-mae-final.png)|
 |---|---|  
 
