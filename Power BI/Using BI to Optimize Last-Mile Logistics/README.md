@@ -1,11 +1,11 @@
 # Using BI to Optimize Last-Mile Logistics
 
-# Objective:
-This project explores a large dataset of Amazon deliveries to uncover insights that can improve delivery efficiency and optimize operations. The analysis focuses on customer behavior, delivery performance, product trends, and traffic impacts—both overall and by area.
+## Data Analysis Process
 
-# 1. Ask the Right Questions (Define the Problem)
+### 1. Define the Problem
+Amazon has noticed a decline in delivery performance, with customers experiencing delays in receiving their packages. To investigate the root causes, I analyzed over 30,000 delivery records to uncover insights that can help improve efficiency and optimize operations. This analysis explores customer behavior, delivery performance, product trends, and traffic impacts—both overall and across different service areas.
 
-## Guiding Questions:
+**Guiding Questions**:
 
    - What factors affect delivery efficiency?  
    - Which product categories are most and least popular?  
@@ -13,14 +13,14 @@ This project explores a large dataset of Amazon deliveries to uncover insights t
    - When are orders most frequently placed?  
    - What patterns exist in agent performance across different conditions?  
 
-# 2. Collect the Data
+### 2. Collect the Data
 
 
-## Dataset Source:
+**Dataset Source**:
 
 The dataset used for this analysis was downloaded from Kaggle and can be found at [Amazon Delivery Dataset](https://www.kaggle.com/datasets/sujalsuthar/amazon-delivery-dataset)
 
-## Key Features:
+**Key Features**:
 
 **Size**: 43,648 rows x 16 columns
 
@@ -36,9 +36,9 @@ The dataset used for this analysis was downloaded from Kaggle and can be found a
 <img src="pics/amazon-data-all-cols.png">
 
 
-# 3. Clean & Prepare the Data
+### 3. Clean & Prepare the Data
 
-## Data Cleaning Tasks:
+**Data Cleaning Tasks**:
 
    - Removed invalid geolocation values (`Store_Latitude`/`Store_Longitude` = 0 - in the Indian Ocean)
 
@@ -54,7 +54,7 @@ The dataset used for this analysis was downloaded from Kaggle and can be found a
    
    - Capitalized first letter of `Vehicle` types for better visuals
 
-## Feature Engineering:
+**Feature Engineering**:
 
    - Created `Month`, `Weekday`, `Weekday_Name` columns using Power Query date functions
 
@@ -73,9 +73,9 @@ The dataset used for this analysis was downloaded from Kaggle and can be found a
    <img src="pics/sort-by-week-day-name.png" style="width:400px; height:400px;">
    
 
-# 4. Analyze the Data
+### 4. Analyze the Data
 
-## a. Time-Series Trends:
+**a. Time-Series Trends**:
 
    - Significant order increases from Feb 18 – Mar 1 (likely due to end-of-month promotions)
 
@@ -87,13 +87,13 @@ The dataset used for this analysis was downloaded from Kaggle and can be found a
 
      * Slowest: semi-urban in high traffic
 
-## b. Traffic Pattern Insights:
+**b. Traffic Pattern Insights**:
 
    - Traffic Jams = longest average transit times (148 mins), lowest ratings
 
    - Low traffic = quickest deliveries (101 mins), highest ratings
 
-## c. Descriptive & Exploratory Analysis:
+**c. Descriptive & Exploratory Analysis**:
 
    - Majority of deliveries were made to Metropolitan areas (30K+ orders)
 
@@ -104,29 +104,29 @@ The dataset used for this analysis was downloaded from Kaggle and can be found a
    - Electronics, books, and jewelry were the top products purchased
 
 
-# 5. Share & Visualize Results
+### 5. Share & Visualize Results
 
-## 4.a Time-Series Trends Visuals:
+**4.a Time-Series Trends Visuals**:
 
    |![](pics/home-db-all.png)|![](pics/home-db-urban-low-fastest-avg-time.png)|
    |:-:|:-:|
    |![](pics/home-db-semi-urban-high-lowest-avg-time.png)|![](pics/home-db-all-traffic-other-area.png)|
    
-## 4.b Traffic Pattern Insights Visuals:
+**4.b Traffic Pattern Insights Visuals**:
 
    |![](pics/home-db-traffic-jam-all-areas.png)|![](pics/home-db-low-traffic-all-areas.png)|
    |:-:|:-:|
 
-## 4.c Descriptive & Exploratory Analysis Visuals:
+**4.c Descriptive & Exploratory Analysis Visuals**:
 
    |![](pics/cats-db.png)|![](pics/cats-db-feb.png)|
    |:-:|:-:|
    |![](pics/cats-db-march.png)|![](pics/cats-db-april.png)|
 
 
-# 6. Act (Draw Conclusions & Recommend Actions)
+### 6. Act (Draw Conclusions & Recommend Actions)
 
-## Key Takeaways:
+### Key Takeaways:
 
    - Transit time influences agent ratings — the quicker the delivery, the better the customer feedback
 
@@ -138,7 +138,7 @@ The dataset used for this analysis was downloaded from Kaggle and can be found a
 
    - Evening orders dominate—especially on Wednesdays and Sundays
 
-## Recommendations:
+### Strategic Recommendations:
 
    - Route deliveries to Urban/Other zones during low-traffic times
 

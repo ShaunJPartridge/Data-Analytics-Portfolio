@@ -6,7 +6,7 @@
 
 Telecom Co., a US-based telecommunications company that offers national and international phone services, is experiencing a high volume of customers canceling their phone service, which is costing the company thousands of dollars in losses.
 
-**Identify Business Goal:**
+**Business Goal:**
 To solve this, I'm proposing a proactive solution to predict at-risk customers using Logistic Regression and Gradient Boosted Tree machine learning models and take action to prevent them from churning.
 
 ### 2. Collect & Store Data
