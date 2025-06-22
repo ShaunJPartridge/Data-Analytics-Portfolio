@@ -92,6 +92,7 @@ What is the percentage of returning customers (retention rate)?
 How Frequently Do Individual Customers Reorder (Repeat Purchase Cycle)?  
 |![](pics/avg-time-between-orders-1.png)|![](pics/avg-time-between-orders-2.png)|![](pics/avg-time-between-orders-3.png)|
 |---|---|---|  
+
 There are 2,721 returning customers; avg days between orders ranges from 0.0 - 348.0; Customers with more orders have less days between orders
 
 Get the customer return frequency over the year  
@@ -101,11 +102,16 @@ Get the customer return frequency over the year
 
 Get the customer return frequency for each warehouse  
 
-<img src="returning-non-returning-customers-warehouse.png" width=400px /><br>  
-
+<img src="pics/returning-non-returning-customers-warehouse.png" width=400px /><br>  
 
 ### 5. Share & Visualize Results  
+
+
+<<<<<<< HEAD
+### 5. Share & Visualize Results  
 This analysis will continue [here]()
+=======
+>>>>>>> 73397a66921621ba9f9eda2a2c3ba975d9a8a1ea
 
 ### 6. Act (Draw Conclusions & Recommend Actions)
 
