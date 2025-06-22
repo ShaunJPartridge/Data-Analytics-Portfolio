@@ -104,9 +104,8 @@ Get the customer return frequency for each warehouse
 <img src="returning-non-returning-customers-warehouse.png" width=400px /><br>  
 
 
-
-
-### 5. Share & Visualize Results
+### 5. Share & Visualize Results  
+This analysis will continue [here]()
 
 ### 6. Act (Draw Conclusions & Recommend Actions)
 
