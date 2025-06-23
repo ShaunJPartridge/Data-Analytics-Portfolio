@@ -41,6 +41,7 @@
 |![](pics/returning-customers.png)|![](pics/total-customers.png)|![](pics/customer-rr.png)|![](pics/avg-days-between-orders.png)|
 
 **Returning Customers Over Time**  
+
 ![](pics/returning-customers-over-time.png)
 
 ### 6. Act (Draw Conclusions & Recommend Actions)
