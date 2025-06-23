@@ -38,8 +38,9 @@
 
 |Returning Customers|Total Customers|Customer Return Rate|Average Days Between Orders|
 |---|---|---|---|
-|![](pics/mae-ss.png)|![](pics/warehouse-turnaround-vs-company-avg.png)|![](pics/warehouse-total-orders.png)||
+|![](pics/returning-customers.png)|![](pics/total-customers.png)|![](pics/customer-rr.png)|![](pics/avg-days-between-orders.png)|
 
+**Returning Customers Over Time**  
 
 
 ### 6. Act (Draw Conclusions & Recommend Actions)
