@@ -52,6 +52,8 @@
 
 ![](pics/total-orders-by-state.png)
 
+**Customer Insights per Warehouse**
+
 ### 6. Act (Draw Conclusions & Recommend Actions)
 
 ## Key Takeaways:
