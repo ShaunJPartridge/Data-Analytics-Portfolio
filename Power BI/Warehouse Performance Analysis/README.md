@@ -44,6 +44,14 @@
 
 ![](pics/returning-customers-over-time.png)
 
+**Returning Customers per Warehouse**  
+
+![](pics/customer-loyalty-per-warehouse.png)
+
+**Total Orders by State**  
+
+![](pics/total-orders-by-state.png)
+
 ### 6. Act (Draw Conclusions & Recommend Actions)
 
 ## Key Takeaways:
