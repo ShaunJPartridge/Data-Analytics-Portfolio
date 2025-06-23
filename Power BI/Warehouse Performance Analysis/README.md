@@ -52,7 +52,31 @@
 
 ![](pics/total-orders-by-state.png)
 
-**Customer Insights per Warehouse**
+**Customer Insights per Warehouse**  
+
+![](pics/lansing-customers.png)|  
+|---|
+|Lansing Fullfillment Center|  
+
+![](pics/ann-arbor-customers.png)|  
+|---|
+|Ann Arbor Fullfillment Center|  
+
+![](pics/memphis-customers.png)|  
+|---|
+|Memphis Fullfillment Center|  
+
+![](pics/frankfort-customers.png)|  
+|---|
+|Frankfort Fullfillment Center|  
+
+![](pics/somerset-customers.png)|  
+|---|
+|Somerset Fullfillment Center|  
+
+![](pics/knoxville-customers.png)|  
+|---|
+|Knoxville Fullfillment Center|
 
 ### 6. Act (Draw Conclusions & Recommend Actions)
 
