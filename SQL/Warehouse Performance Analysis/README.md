@@ -1,4 +1,4 @@
-# Warehouse Performance Analysis
+# Warehouse Performance Analysis - Part 1
 
 ## Data Analysis Process
 
@@ -103,16 +103,5 @@ Get the customer return frequency over the year
 Get the customer return frequency for each warehouse  
 
 <img src="pics/returning-non-returning-customers-warehouse.png" width=400px /><br>  
-
-### 5. Share & Visualize Results  
-
-
-<<<<<<< HEAD
-### 5. Share & Visualize Results  
-This analysis will continue [here]()
-=======
->>>>>>> 73397a66921621ba9f9eda2a2c3ba975d9a8a1ea
-
-### 6. Act (Draw Conclusions & Recommend Actions)
-
-## Key Takeaways:
+ 
+**Steps 5 & 6 for this analysis will continue [here](https://github.com/ShaunJPartridge/Data-Analytics-Portfolio/tree/main/Power%20BI/Warehouse%20Performance%20Analysis)**
