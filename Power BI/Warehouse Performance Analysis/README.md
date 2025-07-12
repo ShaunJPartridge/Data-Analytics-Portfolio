@@ -50,7 +50,9 @@
 
 **Total Orders by State**  
 
-![](pics/total-orders-by-state.png)
+|Michigan|Tennessee|Kentucky|
+|---|---|---|
+|![](pics/state-with-the-most-customers.png)|![](pics/tn-customers.png)|![](pics/ky-customers.png)|
 
 **Customer Insights per Warehouse**  
 
