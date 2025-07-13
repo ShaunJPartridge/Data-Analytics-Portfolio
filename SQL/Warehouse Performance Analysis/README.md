@@ -6,7 +6,7 @@
 National Warehousing Inc., a U.S.-based supply chain company specializing in order fulfillment and storage, seeks to evaluate the performance of its warehouse branches and analyze customer behavior to reduce costs, improve operational efficiency, and enhance customer satisfaction.
 
 ### 2. Collect & Store the Data
-The data for this analysis was already in BigQuery and it is also where the 1st phase of this analysis will be performed. The two tables are `Orders` and `Warehouse` in the dataset, `warehouse_orders`.
+The data for this analysis was already in BigQuery and it is also where the 1st phase of this analysis will be performed. The `Orders` table has columns: `order_id`, `customer_id`, `warehouse_id`, `order_date`, and `shipped_date`. The `Warehouse` table has columns: `warehouse_id`, `warehouse_alias`, `maximum_capacity`, `employee_total`, and `state`. These tables will be joined multiple times on the `warehouse_id` column to extract key insights for this analysis.
 
 **Table Dimensions**:
 
