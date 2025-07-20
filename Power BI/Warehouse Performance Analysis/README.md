@@ -13,7 +13,7 @@ At its core, [MAE](https://www.numberanalytics.com/blog/mastering-mean-absolute-
 ![](pics/mae-ss.png)
 
 **Warehouse Turnaround Time vs Company Average:**  
-The average order turnaround time for each warehouse was examined using the company average of 3 days as a benchmark to evaluate warehouse performance. Results are below.
+The average order turnaround time for each warehouse was examined using the company average of 3 days as a benchmark to evaluate order fulfillment performance. Results are below.
 
 ![](pics/warehouse-turnaround-vs-company-avg.png)
 
