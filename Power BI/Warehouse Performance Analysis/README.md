@@ -117,7 +117,12 @@ The amount of returning customers gradually increased throughout the year with a
 The Lansing Fulfillment Center has the most returning customers at 449 with 16.75 retention rate. Ann Arbor & Memphis followed at 407 (15.87) and 259 (12.24). Frankfort, Somerset,
 and Knoxville warehouses have the least returning customers at 15 (3.09), 13 (2.43), and 7 (2.08).
 
-Orders by State: Michigan - 6,093 orders, Tennessee - 2,691 orders, Kentucky - 1,031 orders
+Orders by State: Michigan - 6,093 orders, Tennessee - 2,691 orders, Kentucky - 1,031 orders  
+
+
+**Recommendations:**  
+
+
 
 ## Key Takeaways:
 
