@@ -81,7 +81,8 @@ Note, there is the MAE before and after I filtered out the order with a date of 
 
 <img src="pics/warehouse-mean-absolute-errors.png" width=350px /><br>  
 |![](pics/warehouse-mae-old.png)|![](pics/warehouse-mae-final.png)|   
-|---|---|  
+|---|---|
+|Before filtering row| After filtering row|    
 
 There's a .6 difference in the MAE for the Ann Arbor facility just because of that one row.  
 
