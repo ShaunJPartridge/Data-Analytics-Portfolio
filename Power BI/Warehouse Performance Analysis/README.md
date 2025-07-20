@@ -1,4 +1,5 @@
-# Warehouse Performance Analysis - Part 2
+# Warehouse Performance Analysis - Part 2   
+click [here](https://github.com/ShaunJPartridge/Data-Analytics-Portfolio/tree/main/SQL/Warehouse%20Performance%20Analysis) for Part 1
 
 ### 5. Share & Visualize Results  
 
