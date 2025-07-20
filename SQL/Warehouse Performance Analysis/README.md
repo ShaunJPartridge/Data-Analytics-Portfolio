@@ -64,20 +64,20 @@ How fast are these orders being processed?
 |![](pics/warehouse-turnaround-1.png)|![](pics/warehouse-turnaround-2.png)|
 |---|---|  
 
-Rank warehouses based off of the average number of orders per week & month
+Rank warehouses based off of the average number of orders per week & month.
 |![](pics/weekly-orders-ranked.png)|![](pics/monthly-orders-ranked.png)|
 |---|---|  
 
-Get a 5-day forecast for orders (Monday-Friday); edited the query so that the first week did not have NULL values
+Get a 5-day forecast for orders (Monday-Friday); edited the query so that the first week did not have NULL values.
 |![](pics/5-day-forecasted-orders-w-nulls.png)|![](pics/5-day-forecasted-orders-final.png)|
 |---|---|  
 
-Compare actual amount of orders to 5-day forecasted amount of orders  
+Compare actual amount of orders to 5-day forecasted amount of orders.    
 
 <img src="pics/actual-vs-forecasted-orders.png" width=400px /><br>  
 
 Which warehouses have orders that either meet or are close to the amount of forecasted orders (have the smallest mean absolute error)?
-Note, there is the MAE before and after I filtered out the order with a date of 2023-09-01  
+Note, there is the MAE before and after I filtered out the order with a date of 2023-09-01.    
 
 <img src="pics/warehouse-mean-absolute-errors.png" width=400px /><br>  
 |![](pics/warehouse-mae-old.png)|![](pics/warehouse-mae-final.png)|
@@ -93,14 +93,14 @@ How Frequently Do Individual Customers Reorder (Repeat Purchase Cycle)?
 |![](pics/avg-time-between-orders-1.png)|![](pics/avg-time-between-orders-2.png)|![](pics/avg-time-between-orders-3.png)|
 |---|---|---|  
 
-There are 2,721 returning customers; avg days between orders ranges from 0.0 - 348.0; Customers with more orders have less days between orders
+There are 2,721 returning customers; avg days between orders ranges from 0.0 - 348.0; customers with more orders have less days between orders.
 
-Get the customer return frequency over the year  
+Get the customer return frequency over the year.  
 
 <img src="pics/monthly-returning-non-returning-customers.png" width=400px /><br>  
 
 
-Get the customer return frequency for each warehouse  
+Get the customer return frequency for each warehouse.    
 
 <img src="pics/returning-non-returning-customers-warehouse.png" width=400px /><br>  
  
