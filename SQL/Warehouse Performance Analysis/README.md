@@ -85,7 +85,7 @@ Note, there is the MAE before and after I filtered out the order with a date of 
 
 There's a .6 difference in the MAE for the Ann Arbor facility just because of that one row.  
 
-What is the percentage of returning customers (retention rate)?  
+What is the percentage of returning customers (retention rate), company-wide?  
 
 <img src="pics/retention-rate.png" width=400px /><br>  
 
