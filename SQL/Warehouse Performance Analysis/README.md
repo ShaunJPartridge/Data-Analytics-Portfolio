@@ -74,20 +74,20 @@ Get a 5-day forecast for orders (Monday-Friday); edited the query so that the fi
 
 Compare actual amount of orders to 5-day forecasted amount of orders.    
 
-<img src="pics/actual-vs-forecasted-orders.png" width=400px /><br>  
+<img src="pics/actual-vs-forecasted-orders.png" width=450px /><br>  
 
 Which warehouses have orders that either meet or are close to the amount of forecasted orders (have the smallest mean absolute error)?
 Note, there is the MAE before and after I filtered out the order with a date of 2023-09-01.    
 
-<img src="pics/warehouse-mean-absolute-errors.png" width=400px /><br>  
-|![](pics/warehouse-mae-old.png)|![](pics/warehouse-mae-final.png)|
+<img src="pics/warehouse-mean-absolute-errors.png" width=350px /><br>  
+|![](pics/warehouse-mae-old.png)|![](pics/warehouse-mae-final.png)|   
 |---|---|  
 
 There's a .6 difference in the MAE for the Ann Arbor facility just because of that one row.  
 
 What is the company-wide retention rate (percentage of returning customers)?  
 
-<img src="pics/retention-rate.png" width=400px /><br>  
+<img src="pics/retention-rate.png" width=450px /><br>  
 
 How Frequently Do Individual Customers Reorder (Repeat Purchase Cycle)?  
 |![](pics/avg-time-between-orders-1.png)|![](pics/avg-time-between-orders-2.png)|![](pics/avg-time-between-orders-3.png)|
@@ -97,11 +97,11 @@ There are 2,721 returning customers; avg days between orders ranges from 0.0 - 3
 
 Get the customer return frequency over the year.  
 
-<img src="pics/monthly-returning-non-returning-customers.png" width=400px /><br>  
+<img src="pics/monthly-returning-non-returning-customers.png" width=450px /><br>  
 
 
 Get the customer return frequency for each warehouse.    
 
-<img src="pics/returning-non-returning-customers-warehouse.png" width=400px /><br>  
+<img src="pics/returning-non-returning-customers-warehouse.png" width=450px /><br>  
  
 **Steps 5 & 6 for this analysis will continue [here](https://github.com/ShaunJPartridge/Data-Analytics-Portfolio/tree/main/Power%20BI/Warehouse%20Performance%20Analysis)**
