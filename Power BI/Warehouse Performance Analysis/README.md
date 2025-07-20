@@ -127,4 +127,4 @@ Warehouses with less orders are more accurate at forecasting orders for the next
 
 Warehouses with more orders have higher customer retention rates.
 
-Most of the companies business is in Michigan, a quarter in Tennessee, and a fraction in Kentucky.
+Most of the company's business is in Michigan, a quarter in Tennessee, and a fraction in Kentucky.
