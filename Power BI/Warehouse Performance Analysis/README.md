@@ -122,7 +122,41 @@ Orders by State: Michigan - 6,093 orders, Tennessee - 2,691 orders, Kentucky - 1
 
 **Recommendations:**  
 
+**1. Establish Forecast Accuracy Benchmarks**  
 
+Warehouses like Somerset and Knoxville consistently produce low forecast errors:
+
+    Use these high-performing centers to establish MAE thresholds for benchmarking.
+
+    Track and visualize MAE trends weekly/monthly to flag underperforming locations.
+
+    Conduct internal reviews to replicate successful forecasting workflows across the network.
+
+**2. Balance Order Volume Across Warehouses**  
+
+Warehouses with large order volumes (e.g., Lansing, Ann Arbor) are also less accurate in forecasting:
+
+    Explore shifting a portion of demand to lower-volume but more accurate centers (e.g., Frankfort, Somerset) where logistically feasible.
+
+    Use forecasting trends to guide future fulfillment capacity planning and resource allocation.
+
+**3. Improve Customer Retention at Low-Return Warehouses**  
+
+Warehouses such as Frankfort, Somerset, and Knoxville have notably low customer return rates:
+
+    Launch targeted re-engagement campaigns (e.g., reorder incentives, personalized offers).
+
+    Investigate potential delivery or service issues affecting customer loyalty in these regions.
+
+    Segment customers by behavior using SQL to tailor retention strategies more effectively.
+
+**4. Leverage Michigan’s Market Strength**
+
+Michigan accounts for over 60% of total order volume:
+
+    Consider piloting loyalty programs or promotions in Michigan to drive even higher customer retention.
+
+    Use Lansing and Ann Arbor as models for marketing and operational strategies in other regions.
 
 ## Key Takeaways:
 
