@@ -51,9 +51,15 @@ Below, are the weekly actual and forecasted orders trend lines for each warehous
 
 ## Customer Insights Section
 
-|Returning Customers|Total Customers|Customer Return Rate|Average Days Between Orders|
-|---|---|---|---|
-|![](pics/returning-customers.png)|![](pics/total-customers.png)|![](pics/customer-rr.png)|![](pics/avg-days-between-orders.png)|
+|Returning Customers|Total Customers|
+|---|---|
+|![](pics/returning-customers.png)|![](pics/total-customers.png)|
+|All returning customers, company-wide|Total customers|  
+
+|Customer Return Rate|Average Days Between Orders|
+|---|---|
+|![](pics/customer-rr.png)|![](pics/avg-days-between-orders.png)|
+|Return rate, company-wide|Amount of days between orders for returning customers|
 
 **Returning Customers Over Time**  
 
@@ -127,7 +133,7 @@ Warehouses with less orders are more accurate at forecasting orders for the next
 
 Warehouses with more orders have higher customer retention rates.
 
-Most of the company's business is in Michigan, a quarter in Tennessee, and a fraction in Kentucky.
+Most of the company's business is in Michigan, a quarter is in Tennessee, and a fraction is in Kentucky.
 
 **Recommendations:**  
 
