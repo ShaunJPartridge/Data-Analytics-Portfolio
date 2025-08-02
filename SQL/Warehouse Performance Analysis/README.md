@@ -93,7 +93,7 @@ How Frequently Do Individual Customers Reorder (Repeat Purchase Cycle)?
 |![](pics/avg-time-between-orders-1.png)|![](pics/avg-time-between-orders-2.png)|![](pics/avg-time-between-orders-3.png)|
 |---|---|---|  
 
-There are 2,721 returning customers; avg days between orders ranges from 0.0 - 348.0; Customers with more orders have less days between orders
+There are 2,721 returning customers; Average number of days between orders range from 0.0 - 348.0; Customers with more orders have less days between orders
 
 Get the customer return frequency over the year  
 
